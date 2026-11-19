@@ -1,0 +1,13 @@
+name = "No Chat Reports"
+filename = "NoChatReports-FABRIC-MC26.3-v2.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/qQyHxfxd/versions/P8m8vbdz/NoChatReports-FABRIC-MC26.3-v2.21.1.jar"
+hash-format = "sha512"
+hash = "07b0caa1b929ca68b1f3599f7d774da99fad11102e7cec4861ca70ea62673be18daa323722dc8c9a7cf8fe9bd325d8102976ae3bb7e704f272cd75c12cbfbc47"
+
+[update]
+[update.modrinth]
+mod-id = "qQyHxfxd"
+version = "P8m8vbdz"

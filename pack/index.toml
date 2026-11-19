@@ -1,0 +1,125 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/3dskinlayers.pw.toml"
+hash = "bb194ec7f1affde2fb2d6d052683e96babe72b693e4c3263dfd8245d3941b701"
+metafile = true
+
+[[files]]
+file = "mods/chat-heads.pw.toml"
+hash = "7959f11cce0c14ffae150d4a3126b04b70b0af815d25453110d2a8408011e9cb"
+metafile = true
+
+[[files]]
+file = "mods/cloth-config.pw.toml"
+hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
+metafile = true
+
+[[files]]
+file = "mods/emotecraft.pw.toml"
+hash = "6a0b784894a89998db3e680b7cdeaf7926b3cd40f452d4cc980985e829ae4cc6"
+metafile = true
+
+[[files]]
+file = "mods/entityculling.pw.toml"
+hash = "3d70571a3f55ab9d923addc371e87440286436b15141abf1ae780fa90dcbcf7d"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "fb72a70cb53c63f1da4520c25c8a7d806cc1c733e827016615623b65d751852d"
+metafile = true
+
+[[files]]
+file = "mods/fallingleaves.pw.toml"
+hash = "58d5cb5d3361d35f10eb65b5e2801cdbfbb0d8ec522982a6ae68f5d335ee9e06"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "069d81cab53c0141459ad4d70bcf3e10f17652f24cc62d3b4a0fc2cd2b700871"
+metafile = true
+
+[[files]]
+file = "mods/fusion-connected-textures.pw.toml"
+hash = "b7568cf4da8e8882fd41d40eff07d84626a77b26ab4c33baff62ea91fcf0fd60"
+metafile = true
+
+[[files]]
+file = "mods/immediatelyfast.pw.toml"
+hash = "a7f6a1543f41198911a8b1e5e059fa0c8003365ebd6c2314e2dfa0806aff300a"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "bae28aaf888e212a4310264a51e585aa252051fcc2467c309670c7786b923ee5"
+metafile = true
+
+[[files]]
+file = "mods/modmenu.pw.toml"
+hash = "3feb5af047a7aabdcbae76e59f0c6603c61ef093d19c44f6d3ad76b48272a6dc"
+metafile = true
+
+[[files]]
+file = "mods/no-chat-reports.pw.toml"
+hash = "e410bdc627efef76767afc9ef7f38911a2f10af431091011b46d932819010276"
+metafile = true
+
+[[files]]
+file = "mods/not-enough-animations.pw.toml"
+hash = "353e7e6605f04764a8fc7f18d7e1833ffd23301f23509a85482654f467fb696f"
+metafile = true
+
+[[files]]
+file = "mods/placeholder-api.pw.toml"
+hash = "4d3d2ad41a037af6f78e2a6c2908c4098bb0b5c03ad0d2711a0c0c6df5e7a172"
+metafile = true
+
+[[files]]
+file = "mods/player-animation-library.pw.toml"
+hash = "edcf67f591069ab1b95b375c673bce575b56869ae3ca3adccc6cfb7bf76e70ab"
+metafile = true
+
+[[files]]
+file = "mods/rechiseled.pw.toml"
+hash = "7eefa70e80d94e4b57093c9e5a07076907c559cf739df81558d4bd7e08dad478"
+metafile = true
+
+[[files]]
+file = "mods/simple-voice-chat.pw.toml"
+hash = "6865b44c30baa85a87c344ac9d3e0eb0135e90b26a90a6dc28bf79a363170cf9"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "d1818a0dd36e725449fbc8ec9e48b4a276d6c3a6e5761ec9646f53cae3504c62"
+metafile = true
+
+[[files]]
+file = "mods/supermartijn642s-config-lib.pw.toml"
+hash = "30520ec5c59d3dca148a45ffe1e59f2795255b6950bf841f5e56fb836fd196b5"
+metafile = true
+
+[[files]]
+file = "mods/supermartijn642s-core-lib.pw.toml"
+hash = "75ad2ba74354543d60233a4814d1d9f65e3b1847b1e555626d586fcc0441e2da"
+metafile = true
+
+[[files]]
+file = "mods/wavey-capes.pw.toml"
+hash = "95637027d29d45d1e3e3e1ceb231236d2cb1414c161b032bd09ca52e1b37c1c5"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-minimap.pw.toml"
+hash = "14e96b12f10a1f2920cdcec89b4d16e452bec4689e117b38b4c0f759145aaf7f"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-world-map.pw.toml"
+hash = "cbb9808546870ecb0a7befebb14df0a11383b1aeafd175a77a0fc4caee44c6f2"
+metafile = true
+
+[[files]]
+file = "servers.dat"
+hash = "f5747c19967aebc90254bcbd8a3b9b05caad55819a919fcfb7580d7c42594436"

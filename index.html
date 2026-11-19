@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Olivé SMP</title>
+<style>
+:root{--bg:#0f1311;--card:#171d1a;--line:#26302b;--fg:#e8efe9;--mut:#93a39a;--acc:#7bd88f;--acc2:#e6c56b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 64px}
+h1{font-size:40px;line-height:1.1;margin:0 0 6px;letter-spacing:-.02em}
+h1 i{font-style:normal;color:var(--acc)}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);margin:44px 0 14px;font-weight:600}
+p{margin:0 0 12px} .mut{color:var(--mut)}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--mut);margin:10px 0 0}
+.dot{width:9px;height:9px;border-radius:50%;background:#555} .on{background:var(--acc);box-shadow:0 0 10px var(--acc)}
+.addr{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:18px;width:fit-content}
+.addr code{font:600 17px ui-monospace,SFMono-Regular,Consolas,monospace}
+button,.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:#1f2723;color:var(--fg);border-radius:8px;padding:6px 12px;text-decoration:none;display:inline-block}
+.btn.main{background:var(--acc);color:#0b120d;border-color:var(--acc);font-weight:700;padding:12px 20px;font-size:17px}
+.btn:hover,button:hover{filter:brightness(1.12)}
+ol.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 18px 46px}
+ol.steps li:before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:8px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--acc)}
+.note{border-left:3px solid var(--acc2);background:#1b1a14;padding:12px 14px;border-radius:0 8px 8px 0;margin:6px 0 0}
+ul.mods{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+ul.mods li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column}
+ul.mods span{font-size:13px;color:var(--mut)} ul.mods em{font-style:normal;font-size:14px;margin-top:4px}
+table{border-collapse:collapse;width:100%} td{padding:7px 0;border-bottom:1px solid var(--line)} td:first-child{width:150px}
+kbd{font:600 13px ui-monospace,Consolas,monospace;background:#232c27;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 7px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-top:8px} summary{cursor:pointer;font-weight:600}
+footer{margin-top:56px;font-size:13px;color:var(--mut)} a{color:var(--acc)}
+</style>
+</head>
+<body><main>
+<h1>Olivé <i>SMP</i></h1>
+<p class="mut">Servidor de Minecraft de los amigos de Josep · Java 26.3 con mods ligeros · abierto 24/7</p>
+<div class="status"><span class="dot" id="dot"></span><span id="st">Comprobando servidor…</span></div>
+<div class="addr"><code id="ip">5.225.81.47</code><button onclick="navigator.clipboard.writeText('5.225.81.47');this.textContent='Copiado'">Copiar</button></div>
+
+<h2>Cómo entrar (Windows)</h2>
+<ol class="steps">
+<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.0.0/Olive-SMP-Windows-1.0.0.zip">Descargar Olivé SMP para Windows</a></p>
+<p class="mut">42 MB. Descomprímelo donde quieras, por ejemplo en el Escritorio. No hace falta instalar nada.</p></li>
+<li><p>Abre <b>PrismLauncher\prismlauncher.exe</b> e inicia sesión con tu cuenta de Microsoft: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>. Solo la primera vez.</p></li>
+<li><p>Doble clic en <b>JUGAR.bat</b>. La primera vez descarga Java y los mods (unos minutos); después entra directo al servidor.</p>
+<p class="mut">Cada vez que juegues, los mods se actualizan solos. No tienes que volver a descargar nada.</p></li>
+</ol>
+<p class="note"><b>Lista blanca:</b> solo entra quien esté apuntado. Pásale a Josep tu <b>nombre de Minecraft</b> exacto antes de jugar.</p>
+
+<details><summary>¿Usas la app de Modrinth, Prism en Linux/Mac u otro launcher?</summary>
+<p style="margin-top:10px">Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.0.0/Olive-SMP-1.0.0.mrpack">Olive-SMP-1.0.0.mrpack</a> e impórtalo (en Modrinth App: <i>+ → Importar</i>; en Prism: <i>Añadir instancia → Importar</i>). El servidor ya viene en la lista de multijugador.</p>
+<p class="mut">Con este método los mods no se actualizan solos: si Josep cambia algo, vuelve a importar el pack desde esta página.</p></details>
+
+<h2>Qué trae</h2>
+<ul class="mods"><li><b>Skins en 3D</b><span>3D Skin Layers</span><em>Las capas de la skin con relieve.</em></li><li><b>Caras en el chat</b><span>Chat Heads</span></li><li><b>Bailes y gestos</b><span>Emotecraft</span><em>Tecla B. Imprescindible para celebrar o burlarse.</em></li><li><b>Hojas que caen</b><span>Falling Leaves</span></li><li><b>Animaciones extra</b><span>Not Enough Animations</span><em>Comer, leer mapas, trepar…</em></li><li><b>Cincel</b><span>Rechiseled</span><em>Cientos de variantes decorativas de cada bloque.</em></li><li><b>Voz por cercanía</b><span>Simple Voice Chat</span><em>Te oyen los que están cerca. Mantén Bloq Mayús.</em></li><li><b>Más FPS</b><span>Sodium</span><em>Motor de render mucho más rápido.</em></li><li><b>Capas que ondean</b><span>Wavey Capes</span></li><li><b>Minimapa</b><span>Xaero&#x27;s Minimap</span><em>Minimapa en pantalla, con puntos de ruta.</em></li><li><b>Mapa del mundo</b><span>Xaero&#x27;s World Map</span><em>Tecla M: todo lo que has explorado.</em></li></ul>
+<p class="mut" style="margin-top:12px">Además, en segundo plano: Cloth Config API, Entity Culling, Fabric API, FerriteCore, Fusion (Connected Textures), ImmediatelyFast, Lithium, Mod Menu, No Chat Reports, Text Placeholder API, Player Animation Library, SuperMartijn642&#x27;s Config Lib, SuperMartijn642&#x27;s Core Lib.</p>
+<p class="mut">En el servidor: sentarse en escaleras y losas, tumbas con tus cosas al morir y menos monstruos para que vaya fluido.</p>
+
+<h2>Teclas</h2>
+<table>
+<tr><td><kbd>M</kbd></td><td>Mapa del mundo</td></tr>
+<tr><td><kbd>B</kbd></td><td>Bailes y gestos</td></tr>
+<tr><td><kbd>Bloq Mayús</kbd></td><td>Hablar (mantener). <kbd>V</kbd> abre el menú de voz</td></tr>
+<tr><td>Clic derecho</td><td>En escaleras o losas, con la mano vacía: sentarse</td></tr>
+<tr><td>Cincel</td><td>Hierro + palo en diagonal. Clic derecho para elegir el bloque</td></tr>
+</table>
+
+<h2>Normas</h2>
+<p>Nada de destrozar construcciones ajenas ni robar. Las granjas gigantes, mejor consultarlas: el servidor es casero y todos compartimos la misma máquina.</p>
+
+<footer>
+<p>Mods descargados directamente de <a href="https://modrinth.com">Modrinth</a> y verificados por hash. Launcher: <a href="https://prismlauncher.org">Prism Launcher</a> (GPL-3.0, <a href="https://github.com/PrismLauncher/PrismLauncher">código fuente</a>). Pack y actualizaciones: <a href="https://packwiz.infra.link">packwiz</a>.</p>
+</footer>
+</main>
+<script>
+fetch("https://api.mcsrvstat.us/3/5.225.81.47").then(r=>r.json()).then(d=>{
+ const on=d.online; document.getElementById("dot").className="dot"+(on?" on":"");
+ document.getElementById("st").textContent=on?`En línea · ${d.players.online}/${d.players.max} jugando`:"Ahora mismo no responde";
+}).catch(()=>document.getElementById("st").textContent="Estado no disponible");
+</script>
+</body></html>
