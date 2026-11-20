@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/iris.properties"
-hash = "8ecc243367f0a59aa723088f320a078ebb96fd40e97b393a06a2fd2626492ebf"
+hash = "8f264a5e16ba5a7f328e316be3720a25c278fa1956a180850fdf099be0a4c70b"
 preserve = true
 
 [[files]]
@@ -151,7 +151,7 @@ hash = "f5747c19967aebc90254bcbd8a3b9b05caad55819a919fcfb7580d7c42594436"
 
 [[files]]
 file = "shaderpacks/complementary-reimagined.pw.toml"
-hash = "94df379b7d879c0095210515673ade5f2188a25357a1fa39b7460de3bfc615ae"
+hash = "34101e279c289fa1c7956d3103f36e6d41f9221822cdeb6305516a1391f6e012"
 metafile = true
 
 [[files]]

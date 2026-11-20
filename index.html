@@ -45,22 +45,41 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 </head>
 <body><main>
 <h1>Olivé <i>SMP</i></h1>
-<p class="mut">Servidor de Minecraft de los amigos de Josep · Java 26.3 con Fabric · abierto 24/7 · versión del pack 1.2.1</p>
+<p class="mut">Servidor de Minecraft de los amigos de Josep · Java 26.3 con Fabric · abierto 24/7 · versión del pack 1.2.2</p>
 <div class="status"><span class="dot" id="dot"></span><span id="st">Comprobando servidor…</span></div>
 <div class="addr"><code>5.225.81.47</code><button onclick="navigator.clipboard.writeText('5.225.81.47');this.textContent='Copiado'">Copiar</button></div>
 <nav><a href="#entrar">Cómo entrar</a><a href="#elegir">Elegir mods</a><a href="#mods">Lista de mods</a><a href="#graficos">Gráficos</a><a href="#teclas">Teclas</a><a href="#voz">Chat de voz</a><a href="#problemas">Problemas</a><a href="#normas">Normas</a></nav>
 
-<h2 id="entrar">Cómo entrar (Windows)</h2>
-<p class="mut">Necesitas Minecraft Java comprado (cuenta de Microsoft) y un PC con al menos 8 GB de RAM.</p>
-<ol class="steps">
-<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.0.0/Olive-SMP-Windows-1.0.0.zip">Descargar Olivé SMP para Windows</a></p>
-<p class="mut">42 MB. Descomprímelo donde quieras, por ejemplo en el Escritorio. No hace falta instalar nada. Aunque ponga 1.0.0, al abrirlo se actualiza solo a la última versión.</p></li>
-<li><p>Abre <b>PrismLauncher\prismlauncher.exe</b> e inicia sesión con tu cuenta de Microsoft: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>. Solo la primera vez.</p></li>
-<li><p>Doble clic en <b>JUGAR.bat</b>. La primera vez sale una ventana para <a href="#elegir">elegir los mods opcionales</a>; después descarga Java y los mods (unos minutos) y entra directo al servidor.</p></li>
-</ol>
+<h2 id="entrar">Cómo entrar</h2>
+<p class="mut">Necesitas Minecraft Java comprado (cuenta de Microsoft; también vale el PC Game Pass) y un ordenador con al menos 8 GB de RAM.</p>
 <p class="note"><b>Antes de jugar, apúntate:</b> en el Discord <b>Cafetería</b>, canal <b>#minecraft</b>, escribe <code>/apuntarme</code> y tu nombre de Minecraft Java exacto. Entras al momento. Una cuenta por persona; si te equivocas, vuelve a usarlo y se cambia. <code>/jugando</code> te dice quién está conectado.</p>
-<details><summary>¿Usas la app de Modrinth, Prism en Linux/Mac u otro launcher?</summary>
-<p style="margin-top:10px">Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.2.1/Olive-SMP-1.2.1.mrpack">Olive-SMP-1.2.1.mrpack</a> e impórtalo (Modrinth App: <i>+ → Importar</i>; Prism: <i>Añadir instancia → Importar</i>). El servidor ya viene en la lista de multijugador.</p>
+<nav style="margin:6px 0 4px"><a href="#win">Windows</a><a href="#mac">Mac</a><a href="#linux">Linux</a></nav>
+
+<h3 id="win">Windows</h3>
+<ol class="steps">
+<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.2.2/Olive-SMP-Windows-1.2.2.zip">Descargar para Windows</a></p>
+<p class="mut">43 MB. Descomprímelo donde quieras, por ejemplo en el Escritorio. No se instala nada.</p></li>
+<li><p>Abre <b>PrismLauncher\prismlauncher.exe</b> e inicia sesión: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>. Solo la primera vez.</p></li>
+<li><p>Doble clic en <b>JUGAR.bat</b>. La primera vez sale la ventana para <a href="#elegir">elegir los mods opcionales</a>; luego descarga Java y los mods (unos minutos) y entra directo al servidor.</p></li>
+</ol>
+
+<h3 id="mac">Mac</h3>
+<ol class="steps">
+<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.2.2/Olive-SMP-Mac-1.2.2.zip">Descargar para Mac</a></p>
+<p class="mut">34 MB. Trae el instalador oficial de Prism Launcher, sin modificar, y la instancia Olivé SMP. Sirve para Mac Intel y Apple Silicon.</p></li>
+<li><p>Abre el <b>.dmg</b> y arrastra <b>Prism Launcher</b> a Aplicaciones. Si macOS no te deja abrirlo: clic derecho → <i>Abrir</i> → <i>Abrir</i>.</p></li>
+<li><p>En Prism, deja Java en automático e inicia sesión: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>.</p></li>
+<li><p>Arrastra <b>Olive-SMP-instancia.zip</b> a la ventana de Prism (o <i>Añadir instancia → Importar</i>) y acepta. Doble clic en <b>Olivé SMP</b> y entra solo.</p></li>
+</ol>
+
+<h3 id="linux">Linux</h3>
+<ol class="steps">
+<li><p>Instala Prism Launcher: <code>flatpak install flathub org.prismlauncher.PrismLauncher</code> o el AppImage de <a href="https://prismlauncher.org/download/">prismlauncher.org</a>.</p></li>
+<li><p><a class="btn" href="https://github.com/JosepOli/olive-smp/releases/download/v1.2.2/Olive-SMP-instancia-1.2.2.zip">Descargar la instancia Olivé SMP</a> (90 KB). Inicia sesión con Microsoft en Prism, arrastra el zip a la ventana (o <i>Añadir instancia → Importar</i>) y doble clic en <b>Olivé SMP</b>.</p></li>
+</ol>
+<p class="mut">En los tres sistemas los mods se actualizan solos cada vez que abres el juego.</p>
+<details><summary>¿Usas la app de Modrinth u otro launcher?</summary>
+<p style="margin-top:10px">Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.2.2/Olive-SMP-1.2.2.mrpack">Olive-SMP-1.2.2.mrpack</a> e impórtalo (Modrinth App: <i>+ → Importar</i>; Prism: <i>Añadir instancia → Importar</i>). El servidor ya viene en la lista de multijugador.</p>
 <p class="mut">Así se instalan todos los mods. Para quitar un opcional, desactívalo en la lista de mods de tu launcher. Los mods no se actualizan solos: si cambia el pack, vuelve a importarlo desde aquí.</p></details>
 
 <h2 id="elegir">Elegir mods</h2>
