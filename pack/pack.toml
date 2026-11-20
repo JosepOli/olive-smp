@@ -1,12 +1,12 @@
 name = "Olive SMP"
 author = "Josep"
-version = "1.0.0"
+version = "1.1.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "1765301036a919078b5d3f29574f69eac1ef20b03106113d31d958be48528bd1"
+hash = "f9da64903f22a3e0b82b88e92529869be55cdca0ef5b45b4d7cac52bf26256c2"
 
 [versions]
 minecraft = "26.3"

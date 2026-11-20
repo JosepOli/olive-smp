@@ -1,6 +1,11 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/iris.properties"
+hash = "8ecc243367f0a59aa723088f320a078ebb96fd40e97b393a06a2fd2626492ebf"
+preserve = true
+
+[[files]]
 file = "mods/3dskinlayers.pw.toml"
 hash = "bb194ec7f1affde2fb2d6d052683e96babe72b693e4c3263dfd8245d3941b701"
 metafile = true
@@ -13,6 +18,11 @@ metafile = true
 [[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
+metafile = true
+
+[[files]]
+file = "mods/continuity.pw.toml"
+hash = "aad07f6496bbf478116eaa0e82fa7fbdd022ca755b392029193e1090d76716b3"
 metafile = true
 
 [[files]]
@@ -51,6 +61,16 @@ hash = "a7f6a1543f41198911a8b1e5e059fa0c8003365ebd6c2314e2dfa0806aff300a"
 metafile = true
 
 [[files]]
+file = "mods/iris.pw.toml"
+hash = "3af2426b8d83a5fcda1ff6de2035d53bcff532653c196f2ea6d7647995e45131"
+metafile = true
+
+[[files]]
+file = "mods/lambdynamiclights.pw.toml"
+hash = "1bcd8fa2d0c2c3390361736420236c2a5331002ae36bb5cba5a062b8708b5ee9"
+metafile = true
+
+[[files]]
 file = "mods/lithium.pw.toml"
 hash = "bae28aaf888e212a4310264a51e585aa252051fcc2467c309670c7786b923ee5"
 metafile = true
@@ -62,12 +82,17 @@ metafile = true
 
 [[files]]
 file = "mods/no-chat-reports.pw.toml"
-hash = "e410bdc627efef76767afc9ef7f38911a2f10af431091011b46d932819010276"
+hash = "b9dcac7c31cfe260b17999b30085a100f3b5ef5f22bd4abc801f6c89c39fba83"
 metafile = true
 
 [[files]]
 file = "mods/not-enough-animations.pw.toml"
 hash = "353e7e6605f04764a8fc7f18d7e1833ffd23301f23509a85482654f467fb696f"
+metafile = true
+
+[[files]]
+file = "mods/particle-rain.pw.toml"
+hash = "430704e2f5fff3fce0d1c635090cd56542baeecb16b9768e412f041ff6908cf4"
 metafile = true
 
 [[files]]
@@ -123,3 +148,13 @@ metafile = true
 [[files]]
 file = "servers.dat"
 hash = "f5747c19967aebc90254bcbd8a3b9b05caad55819a919fcfb7580d7c42594436"
+
+[[files]]
+file = "shaderpacks/complementary-reimagined.pw.toml"
+hash = "5c17de8161b06a10dbd8e59645e7d7edfc583054009b5a787086d5f4fb1a77f1"
+metafile = true
+
+[[files]]
+file = "shaderpacks/makeup-ultra-fast-shaders.pw.toml"
+hash = "1d892c58b3e1eede0f0380955b0e53bd6f55d5cbcefa4a6c15eae8d7924c0e26"
+metafile = true
