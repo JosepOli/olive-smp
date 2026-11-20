@@ -11,3 +11,8 @@ hash = "d00d52d5342728da13a6237f76c50fc5fd1c62d8112ae4e07726bbc64d2019a76130d6b2
 [update.modrinth]
 mod-id = "mOgUt4GM"
 version = "xckkBHD5"
+
+[option]
+optional = true
+default = true
+description = "Mod Menu — Botón «Mods» en el menú para ver y configurar mods."

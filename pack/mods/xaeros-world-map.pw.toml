@@ -11,3 +11,8 @@ hash = "cac3c0fb3121ddebc7f073571dcbce5f1811ca001ea94ef03c1da667e8a3413144f570c4
 [update.modrinth]
 mod-id = "NcUtCpym"
 version = "VM8lNSSM"
+
+[option]
+optional = true
+default = true
+description = "Mapa del mundo (Xaero) — Tecla M: todo lo que has explorado."

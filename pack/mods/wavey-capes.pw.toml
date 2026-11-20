@@ -11,3 +11,8 @@ hash = "8be4bbe1efdf9ccb0d57b4e399849c52ac9034b3ba12012cb71e4951a800205b81bb4e03
 [update.modrinth]
 mod-id = "kYuIpRLv"
 version = "HzJI5xeL"
+
+[option]
+optional = true
+default = true
+description = "Capas que ondean"

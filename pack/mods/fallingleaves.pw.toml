@@ -11,3 +11,8 @@ hash = "43e536b1a7a0f642e1b0f070d82ef4572a390b543098af37d347eab3b6c0408c1ff78a80
 [update.modrinth]
 mod-id = "WhbRG4iK"
 version = "5i0SxXxj"
+
+[option]
+optional = true
+default = true
+description = "Hojas que caen"

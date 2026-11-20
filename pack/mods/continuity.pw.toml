@@ -11,3 +11,8 @@ hash = "1ec1e3b2f73c26b19445d664822a8936e9076f4d8855a2ed5fac19786daa8da42da8fdc9
 [update.modrinth]
 mod-id = "1IjD5062"
 version = "Jt2sCWTQ"
+
+[option]
+optional = true
+default = true
+description = "Texturas conectadas — Cristal y estanterías sin cortes entre bloques."

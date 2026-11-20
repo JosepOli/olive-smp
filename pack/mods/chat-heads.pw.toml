@@ -11,3 +11,8 @@ hash = "2e18d30d38fde2417d9b18a6a7065333f80313e6b73430a82b657ecf4322127587dd0f63
 [update.modrinth]
 mod-id = "Wb5oqrBJ"
 version = "i3gcElvQ"
+
+[option]
+optional = true
+default = true
+description = "Caras en el chat — La cara de cada jugador junto a su mensaje."

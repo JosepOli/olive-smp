@@ -11,3 +11,8 @@ hash = "edf57b80cfe0e0fe229728a6babc3b25c364c07a0406bcdb3a21f73fc225b98954c68ff4
 [update.modrinth]
 mod-id = "1bokaNcj"
 version = "MfxfgXaO"
+
+[option]
+optional = true
+default = true
+description = "Minimapa (Xaero) — Minimapa en pantalla con puntos de ruta."

@@ -11,3 +11,8 @@ hash = "edced01fb330af215ac73b8d9d31011565089f971f87145b87f413f40ee2128b48970aed
 [update.modrinth]
 mod-id = "HVnmMxH1"
 version = "RKfUB9VC"
+
+[option]
+optional = true
+default = true
+description = "Complementary Reimagined — Shader bonito. Gráfica media o buena."

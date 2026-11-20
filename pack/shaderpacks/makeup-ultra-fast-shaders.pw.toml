@@ -11,3 +11,8 @@ hash = "fa7af14ac14bd77bc1c5d8abf5243e9f3dae08777272790de62b9f388db2f5383f8b00c6
 [update.modrinth]
 mod-id = "izsIPI7a"
 version = "t4YRxQug"
+
+[option]
+optional = true
+default = true
+description = "MakeUp Ultra Fast — Shader ligero para PCs modestos."

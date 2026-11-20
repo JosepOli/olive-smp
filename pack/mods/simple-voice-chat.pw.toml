@@ -11,3 +11,8 @@ hash = "f2de66761c0f249bb0f9a4b348f98b97ab4e89d3ed3fd37638420364b7431b757933aa08
 [update.modrinth]
 mod-id = "9eGKb6K1"
 version = "x9jLR94Q"
+
+[option]
+optional = true
+default = true
+description = "Chat de voz — Hablas con quien esté cerca. Sin él no oyes ni te oyen."

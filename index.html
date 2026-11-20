@@ -32,43 +32,84 @@ table{border-collapse:collapse;width:100%} td{padding:7px 0;border-bottom:1px so
 kbd{font:600 13px ui-monospace,Consolas,monospace;background:#232c27;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 7px}
 details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-top:8px} summary{cursor:pointer;font-weight:600}
 footer{margin-top:56px;font-size:13px;color:var(--mut)} a{color:var(--acc)}
+
+.tbl td{vertical-align:top} .tbl td:first-child{width:230px;font-weight:600} .tbl small{display:block;font-weight:400;color:var(--mut);font-size:13px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:99px;margin-left:6px;vertical-align:1px}
+.obl{background:#2a2f2c;color:var(--mut)} .opc{background:#1f3325;color:var(--acc)}
+.cost{font-size:12px;color:var(--mut);white-space:nowrap}
+h3{font-size:15px;margin:22px 0 8px;color:var(--fg)}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:3px 11px;color:var(--mut)} nav a:hover{color:var(--fg)}
 </style>
 </head>
 <body><main>
 <h1>Olivé <i>SMP</i></h1>
-<p class="mut">Servidor de Minecraft de los amigos de Josep · Java 26.3 con mods ligeros · abierto 24/7</p>
+<p class="mut">Servidor de Minecraft de los amigos de Josep · Java 26.3 con Fabric · abierto 24/7 · versión del pack 1.2.0</p>
 <div class="status"><span class="dot" id="dot"></span><span id="st">Comprobando servidor…</span></div>
-<div class="addr"><code id="ip">5.225.81.47</code><button onclick="navigator.clipboard.writeText('5.225.81.47');this.textContent='Copiado'">Copiar</button></div>
+<div class="addr"><code>5.225.81.47</code><button onclick="navigator.clipboard.writeText('5.225.81.47');this.textContent='Copiado'">Copiar</button></div>
+<nav><a href="#entrar">Cómo entrar</a><a href="#elegir">Elegir mods</a><a href="#mods">Lista de mods</a><a href="#graficos">Gráficos</a><a href="#teclas">Teclas</a><a href="#voz">Chat de voz</a><a href="#problemas">Problemas</a><a href="#normas">Normas</a></nav>
 
-<h2>Cómo entrar (Windows)</h2>
+<h2 id="entrar">Cómo entrar (Windows)</h2>
+<p class="mut">Necesitas Minecraft Java comprado (cuenta de Microsoft) y un PC con al menos 8 GB de RAM.</p>
 <ol class="steps">
 <li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.0.0/Olive-SMP-Windows-1.0.0.zip">Descargar Olivé SMP para Windows</a></p>
-<p class="mut">42 MB. Descomprímelo donde quieras, por ejemplo en el Escritorio. No hace falta instalar nada.</p></li>
+<p class="mut">42 MB. Descomprímelo donde quieras, por ejemplo en el Escritorio. No hace falta instalar nada. Aunque ponga 1.0.0, al abrirlo se actualiza solo a la última versión.</p></li>
 <li><p>Abre <b>PrismLauncher\prismlauncher.exe</b> e inicia sesión con tu cuenta de Microsoft: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>. Solo la primera vez.</p></li>
-<li><p>Doble clic en <b>JUGAR.bat</b>. La primera vez descarga Java y los mods (unos minutos); después entra directo al servidor.</p>
-<p class="mut">Cada vez que juegues, los mods se actualizan solos. No tienes que volver a descargar nada.</p></li>
+<li><p>Doble clic en <b>JUGAR.bat</b>. La primera vez sale una ventana para <a href="#elegir">elegir los mods opcionales</a>; después descarga Java y los mods (unos minutos) y entra directo al servidor.</p></li>
 </ol>
 <p class="note"><b>Lista blanca:</b> solo entra quien esté apuntado. Pásale a Josep tu <b>nombre de Minecraft</b> exacto antes de jugar.</p>
-
 <details><summary>¿Usas la app de Modrinth, Prism en Linux/Mac u otro launcher?</summary>
-<p style="margin-top:10px">Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.1.0/Olive-SMP-1.1.0.mrpack">Olive-SMP-1.1.0.mrpack</a> e impórtalo (en Modrinth App: <i>+ → Importar</i>; en Prism: <i>Añadir instancia → Importar</i>). El servidor ya viene en la lista de multijugador.</p>
-<p class="mut">Con este método los mods no se actualizan solos: si Josep cambia algo, vuelve a importar el pack desde esta página.</p></details>
+<p style="margin-top:10px">Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.2.0/Olive-SMP-1.2.0.mrpack">Olive-SMP-1.2.0.mrpack</a> e impórtalo (Modrinth App: <i>+ → Importar</i>; Prism: <i>Añadir instancia → Importar</i>). El servidor ya viene en la lista de multijugador.</p>
+<p class="mut">Así se instalan todos los mods. Para quitar un opcional, desactívalo en la lista de mods de tu launcher. Los mods no se actualizan solos: si cambia el pack, vuelve a importarlo desde aquí.</p></details>
 
-<h2>Qué trae</h2>
-<ul class="mods"><li><b>Skins en 3D</b><span>3D Skin Layers</span><em>Las capas de la skin con relieve.</em></li><li><b>Caras en el chat</b><span>Chat Heads</span></li><li><b>Bailes y gestos</b><span>Emotecraft</span><em>Tecla B. Imprescindible para celebrar o burlarse.</em></li><li><b>Hojas que caen</b><span>Falling Leaves</span></li><li><b>Animaciones extra</b><span>Not Enough Animations</span><em>Comer, leer mapas, trepar…</em></li><li><b>Cincel</b><span>Rechiseled</span><em>Cientos de variantes decorativas de cada bloque.</em></li><li><b>Voz por cercanía</b><span>Simple Voice Chat</span><em>Te oyen los que están cerca. Mantén Bloq Mayús.</em></li><li><b>Más FPS</b><span>Sodium</span><em>Motor de render mucho más rápido.</em></li><li><b>Capas que ondean</b><span>Wavey Capes</span></li><li><b>Minimapa</b><span>Xaero&#x27;s Minimap</span><em>Minimapa en pantalla, con puntos de ruta.</em></li><li><b>Mapa del mundo</b><span>Xaero&#x27;s World Map</span><em>Tecla M: todo lo que has explorado.</em></li></ul>
-<p class="mut" style="margin-top:12px">Además, en segundo plano: Cloth Config API, Entity Culling, Fabric API, FerriteCore, Fusion (Connected Textures), ImmediatelyFast, Lithium, Mod Menu, No Chat Reports, Text Placeholder API, Player Animation Library, SuperMartijn642&#x27;s Config Lib, SuperMartijn642&#x27;s Core Lib.</p>
-<p class="mut">En el servidor: sentarse en escaleras y losas, tumbas con tus cosas al morir y menos monstruos para que vaya fluido.</p>
+<h2 id="elegir">Elegir mods</h2>
+<p>El pack tiene <b>14 mods obligatorios</b>, sin ellos no puedes entrar o el juego va peor, y <b>16 opcionales</b>, que vienen marcados pero puedes quitar.</p>
+<ul style="margin:0 0 12px;padding-left:20px">
+<li>La <b>primera vez</b> que abres el juego sale la ventana <i>Select optional mods</i>: desmarca lo que no quieras y pulsa <i>OK</i>.</li>
+<li>Para <b>cambiarlo después</b>: al abrir el juego aparece unos segundos una ventana de actualización con el botón <i>Optional mods…</i>. Púlsalo y vuelve a elegir.</li>
+<li>Si tu PC va justo, quita primero los <b>shaders</b>; los demás opcionales apenas gastan.</li>
+</ul>
 
-<h2>Gráficos (opcional, depende de tu PC)</h2>
-<p>Los shaders vienen <b>apagados</b> para que vaya fluido en cualquier PC. Pulsa <kbd>K</kbd> en el juego para encenderlos o apagarlos. Para cambiar de shader: <i>Opciones → Calidad gráfica → Shaders</i>.</p>
-<table>
-<tr><td>Complementary</td><td>Bonito de verdad: agua, nubes, sombras y luz. Para gráficas medianas o buenas (GTX 1660 / RX 580 o mejor).</td></tr>
-<tr><td>MakeUp Ultra Fast</td><td>Shader ligero para portátiles y gráficas modestas.</td></tr>
+<h2 id="mods">Lista de mods</h2>
+<h3 style="margin-top:0">Obligatorios <span class="tag obl">siempre se instalan</span></h3>
+<h3>Contenido del servidor</h3><table class="tbl"><tr><td>Fusion<small>Fusion (Connected Textures) 1.3.16a-fabric-mc26.3</small></td><td>Une las texturas de los bloques del cincel.</td></tr>
+<tr><td>Cincel (Rechiseled)<small>Rechiseled 1.2.6a-fabric-mc26.3</small></td><td>Cientos de variantes decorativas de bloques. Obligatorio: el servidor lo tiene.</td></tr>
+</table><h3>Base</h3><table class="tbl"><tr><td>Fabric API<small>Fabric API 0.166.2+26.3</small></td><td>Base que necesitan casi todos los mods.</td></tr>
+<tr><td>No Chat Reports<small>No Chat Reports Fabric-MC26.3-v2.21.2</small></td><td>Privacidad: el chat no se firma ni se puede denunciar a Mojang.</td></tr>
+</table><h3>Rendimiento</h3><table class="tbl"><tr><td>Entity Culling<small>Entity Culling 1.12.1</small></td><td>No dibuja lo que no ves (detrás de paredes).</td></tr>
+<tr><td>FerriteCore<small>FerriteCore 9.0.0-fabric</small></td><td>Usa menos memoria RAM.</td></tr>
+<tr><td>ImmediatelyFast<small>ImmediatelyFast 1.17.1+26.3-fabric</small></td><td>Acelera textos, mapas y HUD.</td></tr>
+<tr><td>Lithium<small>Lithium mc26.3-0.26.4-fabric</small></td><td>Optimiza la lógica del juego.</td></tr>
+<tr><td>Sodium<small>Sodium mc26.3-0.9.3-beta.5-fabric</small></td><td>Muchos más FPS. Necesario para los shaders.</td></tr>
+</table><h3>Librerías</h3><p class="mut">Piezas que necesitan otros mods; no se ven: Cloth Config API, Text Placeholder API, Player Animation Library, SuperMartijn642&#x27;s Config Lib, SuperMartijn642&#x27;s Core Lib.</p>
+<h3 style="margin-top:30px">Opcionales <span class="tag opc">puedes quitarlos</span></h3>
+<p class="mut">Solo cambian lo que ves o escuchas tú; los demás jugadores no lo notan. Excepción: sin chat de voz no oyes a nadie, y sin Emotecraft no ves los bailes de los demás.</p>
+<h3>Mapa</h3><table class="tbl"><tr><td>Minimapa (Xaero)<small>Xaero&#x27;s Minimap fabric-26.3-26.6.2</small></td><td>Minimapa en pantalla con puntos de ruta. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Mapa del mundo (Xaero)<small>Xaero&#x27;s World Map fabric-26.3-1.47.2</small></td><td>Tecla M: todo lo que has explorado. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+</table><h3>Social</h3><table class="tbl"><tr><td>Caras en el chat<small>Chat Heads 1.3.2</small></td><td>La cara de cada jugador junto a su mensaje. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Bailes y gestos (Emotecraft)<small>Emotecraft 3.5.0-b.build.179</small></td><td>Tecla B. Sin él no ves los bailes de los demás. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Chat de voz<small>Simple Voice Chat fabric-2.6.27+26.3</small></td><td>Hablas con quien esté cerca. Sin él no oyes ni te oyen. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+</table><h3>Visual ligero</h3><table class="tbl"><tr><td>Skins en 3D<small>3D Skin Layers 1.11.4</small></td><td>Capas de la skin con relieve. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Texturas conectadas<small>Continuity 3.0.1+26.3</small></td><td>Cristal y estanterías sin cortes entre bloques. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Hojas que caen<small>Falling Leaves 2.0.8+26.3</small></td><td> <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Luz en la mano<small>LambDynamicLights - Dynamic Lights 4.13.0+26.3</small></td><td>Una antorcha en la mano ilumina a tu alrededor. <span class="cost">· coste en tu PC: bajo</span></td></tr>
+<tr><td>Animaciones extra<small>Not Enough Animations 1.12.7</small></td><td>Comer, leer mapas, trepar… <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Lluvia y nieve mejoradas<small>Particle Rain v4.0.4+26.3-fabric</small></td><td>Partículas, salpicaduras y niebla de tormenta. <span class="cost">· coste en tu PC: bajo</span></td></tr>
+<tr><td>Capas que ondean<small>Wavey Capes 1.11.3</small></td><td> <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+</table><h3>Shaders</h3><table class="tbl"><tr><td>Iris<small>Iris Shaders 1.11.7+26.3-fabric</small></td><td>Permite usar shaders (tecla K). Si lo quitas, no hay shaders. <span class="cost">· coste en tu PC: bajo (sin shader)</span></td></tr>
+<tr><td>Complementary Reimagined<small>Complementary Shaders - Reimagined r5.10</small></td><td>Shader bonito. Gráfica media o buena. <span class="cost">· coste en tu PC: alto</span></td></tr>
+<tr><td>MakeUp Ultra Fast<small>MakeUp - Ultra Fast 9.6</small></td><td>Shader ligero para PCs modestos. <span class="cost">· coste en tu PC: medio</span></td></tr>
+</table><h3>Utilidad</h3><table class="tbl"><tr><td>Mod Menu<small>Mod Menu 21.0.1</small></td><td>Botón «Mods» en el menú para ver y configurar mods. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
 </table>
-<p class="mut" style="margin-top:10px">Siempre activos y ligeros: antorchas que iluminan en la mano, lluvia y nieve con partículas, cristal y estanterías con texturas unidas.</p>
-<p class="mut">Si con shaders va lento, bájalos desde su propio menú o vuelve a pulsar <kbd>K</kbd>.</p>
+<p class="mut">En el servidor, y sin instalar nada: sentarse en escaleras y losas, tumbas con tus cosas al morir y menos monstruos para que vaya fluido.</p>
 
-<h2>Teclas</h2>
+<h2 id="graficos">Gráficos</h2>
+<p>Los shaders vienen <b>apagados</b> para que vaya fluido en cualquier PC. Pulsa <kbd>K</kbd> en el juego para encenderlos o apagarlos. Para cambiar de shader o bajar su calidad: <i>Opciones → Calidad gráfica → Shaders</i>.</p>
+<table>
+<tr><td>Complementary</td><td>El bonito: agua, nubes, sombras y luz. Para gráficas medias o buenas (GTX 1660 / RX 580 o mejor).</td></tr>
+<tr><td>MakeUp Ultra Fast</td><td>Ligero, para portátiles y gráficas modestas.</td></tr>
+</table>
+
+<h2 id="teclas">Teclas</h2>
 <table>
 <tr><td><kbd>K</kbd></td><td>Shaders sí / no</td></tr>
 <tr><td><kbd>M</kbd></td><td>Mapa del mundo</td></tr>
@@ -78,8 +119,19 @@ footer{margin-top:56px;font-size:13px;color:var(--mut)} a{color:var(--acc)}
 <tr><td>Cincel</td><td>Hierro + palo en diagonal. Clic derecho para elegir el bloque</td></tr>
 </table>
 
-<h2>Normas</h2>
-<p>Nada de destrozar construcciones ajenas ni robar. Las granjas gigantes, mejor consultarlas: el servidor es casero y todos compartimos la misma máquina.</p>
+<h2 id="voz">Chat de voz</h2>
+<p>La primera vez, pulsa <kbd>V</kbd> y elige tu micrófono. Te oyen los que están cerca, y se oye más bajo cuanto más lejos. Para hablar, mantén <kbd>Bloq Mayús</kbd>; puedes cambiar a «activación por voz» en el mismo menú. En <kbd>V</kbd> también puedes crear un grupo para hablar con tus amigos aunque estéis lejos.</p>
+
+<h2 id="problemas">Problemas frecuentes</h2>
+<details><summary>«You are not white-listed on this server»</summary><p style="margin-top:8px">Aún no te han apuntado. Pásale a Josep tu nombre de Minecraft exacto.</p></details>
+<details><summary>Al entrar sale un error de mods que faltan o no coinciden</summary><p style="margin-top:8px">Te falta un mod obligatorio o tienes una versión vieja. Abre con <b>JUGAR.bat</b> (no con el Minecraft normal) para que se actualice, o vuelve a importar el .mrpack.</p></details>
+<details><summary>Va a tirones o con pocos FPS</summary><p style="margin-top:8px">Pulsa <kbd>K</kbd> para quitar shaders. Si sigue igual, baja la distancia de renderizado (<i>Opciones → Calidad gráfica</i>) o quita los shaders con el botón <i>Optional mods…</i>.</p></details>
+<details><summary>El juego se cierra al arrancar o pide más memoria</summary><p style="margin-top:8px">En Prism: clic derecho en la instancia <i>Olivé SMP → Editar → Ajustes → Memoria</i> y sube el máximo a 6 GB si tu PC tiene 16 GB.</p></details>
+<details><summary>Lag dentro del servidor (bloques que vuelven, mobs que saltan)</summary><p style="margin-top:8px">Es el servidor, no tu PC. Avisa a Josep. Ayuda mucho no construir granjas enormes y no explorar todos a la vez en direcciones distintas.</p></details>
+<details><summary>Me he muerto y he perdido mis cosas</summary><p style="margin-top:8px">No: vuelve a donde moriste y abre la tumba con clic derecho.</p></details>
+
+<h2 id="normas">Normas</h2>
+<p>Nada de destrozar construcciones ajenas ni robar. Las granjas gigantes, mejor consultarlas: el servidor es casero y todos compartimos la misma máquina. El mundo tiene un borde a 2.000 bloques del centro, y el Nether a 500.</p>
 
 <footer>
 <p>Mods descargados directamente de <a href="https://modrinth.com">Modrinth</a> y verificados por hash. Launcher: <a href="https://prismlauncher.org">Prism Launcher</a> (GPL-3.0, <a href="https://github.com/PrismLauncher/PrismLauncher">código fuente</a>). Pack y actualizaciones: <a href="https://packwiz.infra.link">packwiz</a>.</p>

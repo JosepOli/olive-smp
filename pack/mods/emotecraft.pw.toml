@@ -11,3 +11,8 @@ hash = "9985654cd3b1e601d2b6dde3ed950cfdce35369ee44c3694d576dfb18396823e496f739e
 [update.modrinth]
 mod-id = "pZ2wrerK"
 version = "TYkuVa5C"
+
+[option]
+optional = true
+default = true
+description = "Bailes y gestos (Emotecraft) — Tecla B. Sin él no ves los bailes de los demás."

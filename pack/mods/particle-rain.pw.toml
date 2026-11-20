@@ -11,3 +11,8 @@ hash = "8322aa75ec672ae63a4ea78936fd4cb96d8a06c5411bf6d2a76cdbaac1c06ebc7a96cd81
 [update.modrinth]
 mod-id = "nrikgvxm"
 version = "PbaF66N6"
+
+[option]
+optional = true
+default = true
+description = "Lluvia y nieve mejoradas — Partículas, salpicaduras y niebla de tormenta."

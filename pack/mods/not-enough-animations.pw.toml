@@ -11,3 +11,8 @@ hash = "56983d1591b382e0fc2689f639eab9b92a9c3c27cf5269cdcf0363f43c603698c7efa1f4
 [update.modrinth]
 mod-id = "MPCX6s5C"
 version = "bznXVEiI"
+
+[option]
+optional = true
+default = true
+description = "Animaciones extra — Comer, leer mapas, trepar…"
