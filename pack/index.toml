@@ -91,11 +91,6 @@ hash = "f9c9c9a9403cce17b7d051a7e4f55f6fe892150d0d4e5da4b1cbfbe06f7006f8"
 metafile = true
 
 [[files]]
-file = "mods/jade.pw.toml"
-hash = "80e4f995e12e7cc2accfd0e80f903d539e5ce5bd7d0c34a4b658f1f551226aa5"
-metafile = true
-
-[[files]]
 file = "mods/lambdynamiclights.pw.toml"
 hash = "583d3b0615b1b8317a1e4774f55dfd69618673dd6b5423fb79d160ef51a185d6"
 metafile = true
@@ -201,13 +196,18 @@ hash = "d065e3ee9383411707e9be42bbb29d327ab8a96f925582e557a419dee5bbd09f"
 metafile = true
 
 [[files]]
+file = "resourcepacks/better-lanterns.pw.toml"
+hash = "98ceb2d3a5ecdebd6accaa27e8c1b561044346e54880ee59f501a8d8ee8df293"
+metafile = true
+
+[[files]]
 file = "resourcepacks/better-leaves.pw.toml"
 hash = "91c76ffee851d9f2da572e4db88b6e290ba34c1b0b014aa66166ad884b802fa9"
 metafile = true
 
 [[files]]
-file = "resourcepacks/faithful-32x.pw.toml"
-hash = "2a154ef07ddcf2d72f5354b312b4803ef4e7d81ad2389ab23bda30702930f4e6"
+file = "resourcepacks/fancy-crops.pw.toml"
+hash = "72f8434e562f07c93ad3a5c7a2cfbc9e7aa3529f8e3c54200b9b872b079e9334"
 metafile = true
 
 [[files]]
@@ -216,8 +216,23 @@ hash = "51d6625567f8329344cdc1547a8a49747eae629d5009f9fc3228a907ce2ebb3f"
 metafile = true
 
 [[files]]
+file = "resourcepacks/fresh-animations-extensions.pw.toml"
+hash = "68ef49b3819036eb6284afe579e186a6316a386118bcc17eebb2ac16515a0043"
+metafile = true
+
+[[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
 hash = "2b2b3858549ca9c7bf70fc14f2f0c2ab6e2ce50e192cd2eaf102d08a72edab1b"
+metafile = true
+
+[[files]]
+file = "resourcepacks/patrix-32x.pw.toml"
+hash = "525771d1469634e982c691efd3684fcbe7b149265302072b0bff49c95dfcdba8"
+metafile = true
+
+[[files]]
+file = "resourcepacks/visual-armor-trims.pw.toml"
+hash = "56226185ff349541eb7dd1671be8b4a8d45216c71220f162f88dc32dfd440b71"
 metafile = true
 
 [[files]]
