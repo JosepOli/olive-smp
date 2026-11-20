@@ -11,6 +11,16 @@ hash = "e6de718b8d12e8c945dc1bf4ef3cf74f74787dfa4c40f2c389c27d5797e530e1"
 metafile = true
 
 [[files]]
+file = "mods/appleskin.pw.toml"
+hash = "98fc0f61d763ae6e30119ecf1e0e1374beab6e68095ab04a21c9f5b1490b832f"
+metafile = true
+
+[[files]]
+file = "mods/architectury-api.pw.toml"
+hash = "44391be60d4d86aca6997969089e5694e53f10e99d6c27c5001f24f85d688c87"
+metafile = true
+
+[[files]]
 file = "mods/chat-heads.pw.toml"
 hash = "c4bf67e6d22941a26962344cae7d83c02386815cb0b8a0613b222d27d899f69b"
 metafile = true
@@ -31,13 +41,28 @@ hash = "fb406de3e267b6c6bd7b1b92f836caaf4a319123cac0e2813aa228133cf59100"
 metafile = true
 
 [[files]]
+file = "mods/entity-model-features.pw.toml"
+hash = "bab0ac0c4619dd81727f7b1af158415dc98d0d656cd6696d657920c45c6b6707"
+metafile = true
+
+[[files]]
 file = "mods/entityculling.pw.toml"
 hash = "3d70571a3f55ab9d923addc371e87440286436b15141abf1ae780fa90dcbcf7d"
 metafile = true
 
 [[files]]
+file = "mods/entitytexturefeatures.pw.toml"
+hash = "c03a3be5d6c1e3b7a0f60b11c602835f09ded75c7f4deea6888f30347ee6e0bc"
+metafile = true
+
+[[files]]
 file = "mods/fabric-api.pw.toml"
 hash = "fb72a70cb53c63f1da4520c25c8a7d806cc1c733e827016615623b65d751852d"
+metafile = true
+
+[[files]]
+file = "mods/fabric-language-kotlin.pw.toml"
+hash = "1811d49906aa7a1e7f1230535c6fec91be45129d028f7900cf35571a497e42b3"
 metafile = true
 
 [[files]]
@@ -66,6 +91,11 @@ hash = "f9c9c9a9403cce17b7d051a7e4f55f6fe892150d0d4e5da4b1cbfbe06f7006f8"
 metafile = true
 
 [[files]]
+file = "mods/jade.pw.toml"
+hash = "80e4f995e12e7cc2accfd0e80f903d539e5ce5bd7d0c34a4b658f1f551226aa5"
+metafile = true
+
+[[files]]
 file = "mods/lambdynamiclights.pw.toml"
 hash = "583d3b0615b1b8317a1e4774f55dfd69618673dd6b5423fb79d160ef51a185d6"
 metafile = true
@@ -78,6 +108,11 @@ metafile = true
 [[files]]
 file = "mods/modmenu.pw.toml"
 hash = "36509ee31f6ec068e0e564740f6f31aa4ec84efd51082a9639acbd2a505fd7f7"
+metafile = true
+
+[[files]]
+file = "mods/mouse-tweaks.pw.toml"
+hash = "27239682d0d3349ac39670f009514f788e3e384ef7e8b09ac5c0caacd0ee6b33"
 metafile = true
 
 [[files]]
@@ -108,6 +143,16 @@ metafile = true
 [[files]]
 file = "mods/rechiseled.pw.toml"
 hash = "7eefa70e80d94e4b57093c9e5a07076907c559cf739df81558d4bd7e08dad478"
+metafile = true
+
+[[files]]
+file = "mods/rei.pw.toml"
+hash = "b62f401b2b5982a5d8ecc4629f3c9baf0bb02dcfb11128a4650c00c7800249f1"
+metafile = true
+
+[[files]]
+file = "mods/shulkerboxtooltip.pw.toml"
+hash = "47d6912df56b64c4c80697b68c70817c4c3738ab4476a4d013c9b040792ea3a5"
 metafile = true
 
 [[files]]
@@ -143,6 +188,36 @@ metafile = true
 [[files]]
 file = "mods/xaeros-world-map.pw.toml"
 hash = "84b12d14895e58f572817c794ca6a578e2ab49d4a2afc51197ed9801ce6b4e3a"
+metafile = true
+
+[[files]]
+file = "mods/yacl.pw.toml"
+hash = "7b82bfcde20d2ac0fb158c003caf5288523272ca462f519864ee424912e4e4dd"
+metafile = true
+
+[[files]]
+file = "mods/zoomify.pw.toml"
+hash = "d065e3ee9383411707e9be42bbb29d327ab8a96f925582e557a419dee5bbd09f"
+metafile = true
+
+[[files]]
+file = "resourcepacks/better-leaves.pw.toml"
+hash = "91c76ffee851d9f2da572e4db88b6e290ba34c1b0b014aa66166ad884b802fa9"
+metafile = true
+
+[[files]]
+file = "resourcepacks/faithful-32x.pw.toml"
+hash = "2a154ef07ddcf2d72f5354b312b4803ef4e7d81ad2389ab23bda30702930f4e6"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fast-better-grass.pw.toml"
+hash = "51d6625567f8329344cdc1547a8a49747eae629d5009f9fc3228a907ce2ebb3f"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fresh-animations.pw.toml"
+hash = "2b2b3858549ca9c7bf70fc14f2f0c2ab6e2ce50e192cd2eaf102d08a72edab1b"
 metafile = true
 
 [[files]]
