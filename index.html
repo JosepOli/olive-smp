@@ -36,7 +36,9 @@ footer{margin-top:56px;font-size:13px;color:var(--mut)} a{color:var(--acc)}
 .tbl td{vertical-align:top} .tbl td:first-child{width:230px;font-weight:600} .tbl small{display:block;font-weight:400;color:var(--mut);font-size:13px}
 .tag{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:99px;margin-left:6px;vertical-align:1px}
 .obl{background:#2a2f2c;color:var(--mut)} .opc{background:#1f3325;color:var(--acc)}
-.cost{font-size:12px;color:var(--mut);white-space:nowrap}
+.cost{display:block;font-size:13px;color:#b9c7bf;margin-top:2px}
+.tbl{margin-bottom:6px}
+@media (max-width:560px){.tbl td{display:block;width:auto!important;border-bottom:0;padding:2px 0}.tbl tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}}
 h3{font-size:15px;margin:22px 0 8px;color:var(--fg)}
 nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:3px 11px;color:var(--mut)} nav a:hover{color:var(--fg)}
 </style>
@@ -83,24 +85,24 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 </table><h3>Librerías</h3><p class="mut">Piezas que necesitan otros mods; no se ven: Cloth Config API, Text Placeholder API, Player Animation Library, SuperMartijn642&#x27;s Config Lib, SuperMartijn642&#x27;s Core Lib.</p>
 <h3 style="margin-top:30px">Opcionales <span class="tag opc">puedes quitarlos</span></h3>
 <p class="mut">Solo cambian lo que ves o escuchas tú; los demás jugadores no lo notan. Excepción: sin chat de voz no oyes a nadie, y sin Emotecraft no ves los bailes de los demás.</p>
-<h3>Mapa</h3><table class="tbl"><tr><td>Minimapa (Xaero)<small>Xaero&#x27;s Minimap fabric-26.3-26.6.2</small></td><td>Minimapa en pantalla con puntos de ruta. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-<tr><td>Mapa del mundo (Xaero)<small>Xaero&#x27;s World Map fabric-26.3-1.47.2</small></td><td>Tecla M: todo lo que has explorado. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-</table><h3>Social</h3><table class="tbl"><tr><td>Caras en el chat<small>Chat Heads 1.3.2</small></td><td>La cara de cada jugador junto a su mensaje. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-<tr><td>Bailes y gestos (Emotecraft)<small>Emotecraft 3.5.0-b.build.179</small></td><td>Tecla B. Sin él no ves los bailes de los demás. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-<tr><td>Chat de voz<small>Simple Voice Chat fabric-2.6.27+26.3</small></td><td>Hablas con quien esté cerca. Sin él no oyes ni te oyen. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-</table><h3>Visual ligero</h3><table class="tbl"><tr><td>Skins en 3D<small>3D Skin Layers 1.11.4</small></td><td>Capas de la skin con relieve. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-<tr><td>Texturas conectadas<small>Continuity 3.0.1+26.3</small></td><td>Cristal y estanterías sin cortes entre bloques. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-<tr><td>Hojas que caen<small>Falling Leaves 2.0.8+26.3</small></td><td> <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-<tr><td>Luz en la mano<small>LambDynamicLights - Dynamic Lights 4.13.0+26.3</small></td><td>Una antorcha en la mano ilumina a tu alrededor. <span class="cost">· coste en tu PC: bajo</span></td></tr>
-<tr><td>Animaciones extra<small>Not Enough Animations 1.12.7</small></td><td>Comer, leer mapas, trepar… <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-<tr><td>Lluvia y nieve mejoradas<small>Particle Rain v4.0.4+26.3-fabric</small></td><td>Partículas, salpicaduras y niebla de tormenta. <span class="cost">· coste en tu PC: bajo</span></td></tr>
-<tr><td>Capas que ondean<small>Wavey Capes 1.11.3</small></td><td> <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
-</table><h3>Shaders</h3><table class="tbl"><tr><td>Iris<small>Iris Shaders 1.11.7+26.3-fabric</small></td><td>Permite usar shaders (tecla K). Si lo quitas, no hay shaders. <span class="cost">· coste en tu PC: bajo (sin shader)</span></td></tr>
-<tr><td>Complementary Reimagined<small>Complementary Shaders - Reimagined r5.10</small></td><td>Shader bonito. Gráfica media o buena. <span class="cost">· coste en tu PC: alto</span></td></tr>
-<tr><td>MakeUp Ultra Fast<small>MakeUp - Ultra Fast 9.6</small></td><td>Shader ligero para PCs modestos. <span class="cost">· coste en tu PC: medio</span></td></tr>
-</table><h3>Utilidad</h3><table class="tbl"><tr><td>Mod Menu<small>Mod Menu 21.0.1</small></td><td>Botón «Mods» en el menú para ver y configurar mods. <span class="cost">· coste en tu PC: muy bajo</span></td></tr>
+<h3>Mapa</h3><table class="tbl"><tr><td>Minimapa (Xaero)<small>Xaero&#x27;s Minimap fabric-26.3-26.6.2</small></td><td>Minimapa en pantalla con puntos de ruta. <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Mapa del mundo (Xaero)<small>Xaero&#x27;s World Map fabric-26.3-1.47.2</small></td><td>Tecla M: todo lo que has explorado. <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+</table><h3>Social</h3><table class="tbl"><tr><td>Caras en el chat<small>Chat Heads 1.3.2</small></td><td>La cara de cada jugador junto a su mensaje. <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Bailes y gestos (Emotecraft)<small>Emotecraft 3.5.0-b.build.179</small></td><td>Tecla B. Sin él no ves los bailes de los demás. <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Chat de voz<small>Simple Voice Chat fabric-2.6.27+26.3</small></td><td>Hablas con quien esté cerca. Sin él no oyes ni te oyen. <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+</table><h3>Visual ligero</h3><table class="tbl"><tr><td>Skins en 3D<small>3D Skin Layers 1.11.4</small></td><td>Capas de la skin con relieve. <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Texturas conectadas<small>Continuity 3.0.1+26.3</small></td><td>Cristal y estanterías sin cortes entre bloques. <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Hojas que caen<small>Falling Leaves 2.0.8+26.3</small></td><td><span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Luz en la mano<small>LambDynamicLights - Dynamic Lights 4.13.0+26.3</small></td><td>Una antorcha en la mano ilumina a tu alrededor. <span class="cost">Coste en tu PC: bajo</span></td></tr>
+<tr><td>Animaciones extra<small>Not Enough Animations 1.12.7</small></td><td>Comer, leer mapas, trepar… <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+<tr><td>Lluvia y nieve mejoradas<small>Particle Rain v4.0.4+26.3-fabric</small></td><td>Partículas, salpicaduras y niebla de tormenta. <span class="cost">Coste en tu PC: bajo</span></td></tr>
+<tr><td>Capas que ondean<small>Wavey Capes 1.11.3</small></td><td><span class="cost">Coste en tu PC: muy bajo</span></td></tr>
+</table><h3>Shaders</h3><table class="tbl"><tr><td>Iris<small>Iris Shaders 1.11.7+26.3-fabric</small></td><td>Permite usar shaders (tecla K). Si lo quitas, no hay shaders. <span class="cost">Coste en tu PC: bajo (sin shader)</span></td></tr>
+<tr><td>Complementary Reimagined<small>Complementary Shaders - Reimagined r5.10</small></td><td>Shader bonito. Gráfica media o buena. <span class="cost">Coste en tu PC: alto</span></td></tr>
+<tr><td>MakeUp Ultra Fast<small>MakeUp - Ultra Fast 9.6</small></td><td>Shader ligero para PCs modestos. <span class="cost">Coste en tu PC: medio</span></td></tr>
+</table><h3>Utilidad</h3><table class="tbl"><tr><td>Mod Menu<small>Mod Menu 21.0.1</small></td><td>Botón «Mods» en el menú para ver y configurar mods. <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
 </table>
-<p class="mut">En el servidor, y sin instalar nada: sentarse en escaleras y losas, tumbas con tus cosas al morir y menos monstruos para que vaya fluido.</p>
+<p class="mut" style="margin-top:18px">En el servidor, y sin instalar nada: sentarse en escaleras y losas, tumbas con tus cosas al morir y menos monstruos para que vaya fluido.</p>
 
 <h2 id="graficos">Gráficos</h2>
 <p>Los shaders vienen <b>apagados</b> para que vaya fluido en cualquier PC. Pulsa <kbd>K</kbd> en el juego para encenderlos o apagarlos. Para cambiar de shader o bajar su calidad: <i>Opciones → Calidad gráfica → Shaders</i>.</p>
