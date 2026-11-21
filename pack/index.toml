@@ -245,6 +245,11 @@ file = "servers.dat"
 hash = "f5747c19967aebc90254bcbd8a3b9b05caad55819a919fcfb7580d7c42594436"
 
 [[files]]
+file = "shaderpacks/bsl-shaders.pw.toml"
+hash = "e151293f85ad0138406063f7607e02f4ee3b583d28fdd3957f6e88cb3e1df1ad"
+metafile = true
+
+[[files]]
 file = "shaderpacks/complementary-reimagined.pw.toml"
 hash = "34101e279c289fa1c7956d3103f36e6d41f9221822cdeb6305516a1391f6e012"
 metafile = true
