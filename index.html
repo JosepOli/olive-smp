@@ -45,19 +45,19 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 </head>
 <body><main>
 <h1>Olivé <i>SMP</i></h1>
-<p class="mut">Servidor de Minecraft de los amigos de Josep · Java 26.3 con Fabric · abierto 24/7 · versión del pack 1.3.1</p>
+<p class="mut">Servidor de Minecraft de los amigos de Josep · Java 26.3 con Fabric · abierto 24/7 · versión del pack 1.4.0</p>
 <div class="status"><span class="dot" id="dot"></span><span id="st">Comprobando servidor…</span></div>
 <div class="addr"><code>5.225.81.47</code><button onclick="navigator.clipboard.writeText('5.225.81.47');this.textContent='Copiado'">Copiar</button></div>
-<nav><a href="#entrar">Cómo entrar</a><a href="#elegir">Elegir mods</a><a href="#mods">Lista de mods</a><a href="#versiones">Versiones</a><a href="#graficos">Gráficos</a><a href="#teclas">Teclas</a><a href="#voz">Chat de voz</a><a href="#problemas">Problemas</a><a href="#normas">Normas</a></nav>
+<nav><a href="#entrar">Cómo entrar</a><a href="#tlauncher">TLauncher</a><a href="#elegir">Elegir mods</a><a href="#mods">Lista de mods</a><a href="#versiones">Versiones</a><a href="#graficos">Gráficos</a><a href="#teclas">Teclas</a><a href="#voz">Chat de voz</a><a href="#problemas">Problemas</a><a href="#normas">Normas</a></nav>
 
 <h2 id="entrar">Cómo entrar</h2>
-<p class="mut">Necesitas Minecraft Java comprado (cuenta de Microsoft; también vale el PC Game Pass) y un ordenador con al menos 8 GB de RAM.</p>
-<p class="note"><b>Antes de jugar, apúntate:</b> en el Discord <b>Cafetería</b>, canal <b>#minecraft</b>, escribe <code>/apuntarme</code> y tu nombre de Minecraft Java exacto. Entras al momento. Una cuenta por persona; si te equivocas, vuelve a usarlo y se cambia. <code>/jugando</code> te dice quién está conectado.</p>
-<nav style="margin:6px 0 4px"><a href="#win">Windows</a><a href="#mac">Mac</a><a href="#linux">Linux</a></nav>
+<p class="mut">Vale <b>Minecraft Java comprado</b> (cuenta de Microsoft; también el PC Game Pass) y también <b><a href="#tlauncher">TLauncher</a></b>. No vale la versión Bedrock (consola, móvil o Microsoft Store). Necesitas un ordenador con al menos 8 GB de RAM.</p>
+<p class="note"><b>Antes de jugar, apúntate:</b> en el Discord <b>Cafetería</b>, canal <b>#minecraft</b>, escribe <code>/apuntarme</code> y tu nombre de Minecraft exacto, <b>mayúsculas incluidas</b>. Entras al momento. Una cuenta por persona; si te equivocas, vuelve a usarlo y se cambia. <code>/jugando</code> te dice quién está conectado.</p>
+<nav style="margin:6px 0 4px"><a href="#win">Windows</a><a href="#mac">Mac</a><a href="#linux">Linux</a><a href="#tlauncher">TLauncher</a></nav>
 
 <h3 id="win">Windows</h3>
 <ol class="steps">
-<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.3.1/Olive-SMP-Windows-1.3.1.zip">Descargar para Windows</a></p>
+<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.0/Olive-SMP-Windows-1.4.0.zip">Descargar para Windows</a></p>
 <p class="mut">43 MB. Descomprímelo donde quieras, por ejemplo en el Escritorio. No se instala nada.</p></li>
 <li><p>Abre <b>PrismLauncher\prismlauncher.exe</b> e inicia sesión: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>. Solo la primera vez.</p></li>
 <li><p>Doble clic en <b>JUGAR.bat</b>. La primera vez sale la ventana para <a href="#elegir">elegir los mods opcionales</a>; luego descarga Java y los mods (unos minutos) y entra directo al servidor.</p></li>
@@ -65,7 +65,7 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 
 <h3 id="mac">Mac</h3>
 <ol class="steps">
-<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.3.1/Olive-SMP-Mac-1.3.1.zip">Descargar para Mac</a></p>
+<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.0/Olive-SMP-Mac-1.4.0.zip">Descargar para Mac</a></p>
 <p class="mut">34 MB. Trae el instalador oficial de Prism Launcher, sin modificar, y la instancia Olivé SMP. Sirve para Mac Intel y Apple Silicon.</p></li>
 <li><p>Abre el <b>.dmg</b> y arrastra <b>Prism Launcher</b> a Aplicaciones. Si macOS no te deja abrirlo: clic derecho → <i>Abrir</i> → <i>Abrir</i>.</p></li>
 <li><p>En Prism, deja Java en automático e inicia sesión: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>.</p></li>
@@ -75,15 +75,25 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <h3 id="linux">Linux</h3>
 <ol class="steps">
 <li><p>Instala Prism Launcher: <code>flatpak install flathub org.prismlauncher.PrismLauncher</code> o el AppImage de <a href="https://prismlauncher.org/download/">prismlauncher.org</a>.</p></li>
-<li><p><a class="btn" href="https://github.com/JosepOli/olive-smp/releases/download/v1.3.1/Olive-SMP-instancia-1.3.1.zip">Descargar la instancia Olivé SMP</a> (90 KB). Inicia sesión con Microsoft en Prism, arrastra el zip a la ventana (o <i>Añadir instancia → Importar</i>) y doble clic en <b>Olivé SMP</b>.</p></li>
+<li><p><a class="btn" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.0/Olive-SMP-instancia-1.4.0.zip">Descargar la instancia Olivé SMP</a> (90 KB). Inicia sesión con Microsoft en Prism, arrastra el zip a la ventana (o <i>Añadir instancia → Importar</i>) y doble clic en <b>Olivé SMP</b>.</p></li>
 </ol>
 <p class="mut">En los tres sistemas los mods se actualizan solos cada vez que abres el juego.</p>
+
+<h3 id="tlauncher">TLauncher (Windows)</h3>
+<ol class="steps">
+<li><p>Apúntate en Discord con <code>/apuntarme</code> y <b>el mismo nombre que pones en TLauncher</b>, mayúsculas incluidas. Si el nombre ya es de una cuenta de Minecraft original, el servidor no te dejará entrar con él: elige otro.</p></li>
+<li><p>Abre TLauncher una vez y ciérralo (así crea su carpeta). <a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.0/Olive-SMP-TLauncher-1.4.0.zip">Descargar instalador para TLauncher</a></p>
+<p class="mut">10 KB. Descomprímelo y haz doble clic en <b>Instalar-Olive-SMP.bat</b>. Descarga los mods de Modrinth y comprueba cada uno (un par de minutos). Si tenías otros mods, los aparta a una carpeta <i>mods-antes-de-OliveSMP</i>; no borra nada. Te pregunta si quieres Distant Horizons. Si Windows avisa de que viene de Internet: <i>Más información → Ejecutar de todas formas</i>.</p></li>
+<li><p>En TLauncher elige la versión <b>fabric-loader-0.20.1-26.3</b> (o <i>Fabric 26.3</i>) y entra. El servidor ya está en <i>Multijugador</i>.</p></li>
+<li><p>La primera vez, en el chat: <code>/register TuContraseña TuContraseña</code>. Las siguientes: <code>/login TuContraseña</code>. No uses una contraseña que tengas en otro sitio.</p></li>
+</ol>
+<p class="mut">Con TLauncher los mods no se actualizan solos: cuando cambie el pack, vuelve a ejecutar el instalador. Descarga TLauncher solo de su web oficial.</p>
 <details><summary>¿Usas la app de Modrinth u otro launcher?</summary>
-<p style="margin-top:10px">Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.3.1/Olive-SMP-1.3.1.mrpack">Olive-SMP-1.3.1.mrpack</a> e impórtalo (Modrinth App: <i>+ → Importar</i>; Prism: <i>Añadir instancia → Importar</i>). El servidor ya viene en la lista de multijugador.</p>
+<p style="margin-top:10px">Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.0/Olive-SMP-1.4.0.mrpack">Olive-SMP-1.4.0.mrpack</a> e impórtalo (Modrinth App: <i>+ → Importar</i>; Prism: <i>Añadir instancia → Importar</i>). El servidor ya viene en la lista de multijugador.</p>
 <p class="mut">Así se instalan todos los mods. Para quitar un opcional, desactívalo en la lista de mods de tu launcher. Los mods no se actualizan solos: si cambia el pack, vuelve a importarlo desde aquí.</p></details>
 
 <h2 id="elegir">Elegir mods</h2>
-<p>El pack tiene <b>17 mods obligatorios</b>, sin ellos no puedes entrar o el juego va peor, y <b>31 opcionales</b>, que vienen marcados pero puedes quitar.</p>
+<p>El pack tiene <b>17 mods obligatorios</b>, sin ellos no puedes entrar o el juego va peor, y <b>32 opcionales</b>, que vienen marcados pero puedes quitar.</p>
 <ul style="margin:0 0 12px;padding-left:20px">
 <li>La <b>primera vez</b> que abres el juego sale la ventana <i>Select optional mods</i>: desmarca lo que no quieras y pulsa <i>OK</i>.</li>
 <li>Para <b>cambiarlo después</b>: al abrir el juego aparece unos segundos una ventana de actualización con el botón <i>Optional mods…</i>. Púlsalo y vuelve a elegir.</li>
@@ -96,7 +106,7 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <tr><td>Cincel (Rechiseled)<small>Rechiseled 1.2.6a-fabric-mc26.3</small></td><td>Cientos de variantes decorativas de bloques. Obligatorio: el servidor lo tiene.</td></tr>
 </table>
 <h3>Base</h3><table class="tbl"><tr><td>Fabric API<small>Fabric API 0.166.2+26.3</small></td><td>Base que necesitan casi todos los mods.</td></tr>
-<tr><td>No Chat Reports<small>No Chat Reports Fabric-MC26.3-v2.21.2</small></td><td>Privacidad: el chat no se firma ni se puede denunciar a Mojang.</td></tr>
+<tr><td>No Chat Reports<small>No Chat Reports Fabric-MC26.3-v2.21.3</small></td><td>Privacidad: el chat no se firma ni se puede denunciar a Mojang.</td></tr>
 </table>
 <h3>Rendimiento</h3><table class="tbl"><tr><td>Entity Culling<small>Entity Culling 1.12.1</small></td><td>No dibuja lo que no ves (detrás de paredes).</td></tr>
 <tr><td>FerriteCore<small>FerriteCore 9.0.0-fabric</small></td><td>Usa menos memoria RAM.</td></tr>
@@ -129,6 +139,8 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <tr><td>Lluvia y nieve mejoradas<small>Particle Rain v4.0.4+26.3-fabric</small></td><td>Partículas, salpicaduras y niebla de tormenta. <span class="cost">Coste en tu PC: bajo</span></td></tr>
 <tr><td>Capas que ondean<small>Wavey Capes 1.11.3</small></td><td> <span class="cost">Coste en tu PC: muy bajo</span></td></tr>
 </table>
+<h3>Vista lejana</h3><table class="tbl"><tr><td>Distant Horizons<small>Distant Horizons 3.3.4-26.3</small></td><td>Ves montañas y construcciones a kilómetros. El servidor te envía el paisaje ya calculado. Necesita buen PC (16 GB de RAM y gráfica decente): viene desmarcado. <span class="cost">Coste en tu PC: alto</span></td></tr>
+</table>
 <h3>Texturas</h3><table class="tbl"><tr><td>Entity Model Features<small>[EMF] Entity Model Features 3.3.12-fabric-26.3</small></td><td>Necesario para Fresh Animations. <span class="cost">Coste en tu PC: bajo</span></td></tr>
 <tr><td>Entity Texture Features<small>[ETF] Entity Texture Features 7.2.7-fabric-26.3</small></td><td>Necesario para Fresh Animations. <span class="cost">Coste en tu PC: bajo</span></td></tr>
 <tr><td>Patrix 32x<small>Patrix 32x 93</small></td><td>Texturas realistas con los colores de siempre; con shaders ganan relieve y brillos. El cambio que más se nota. 72 MB. <span class="cost">Coste en tu PC: medio</span></td></tr>
@@ -160,6 +172,7 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <tr><td><a href="https://modrinth.com/mod/chat-heads">Chat Heads</a></td><td><code>1.3.2</code></td><td>Opcional</td></tr>
 <tr><td><a href="https://modrinth.com/mod/cloth-config">Cloth Config API</a></td><td><code>26.3.159+fabric</code></td><td>Obligatorio</td></tr>
 <tr><td><a href="https://modrinth.com/mod/continuity">Continuity</a></td><td><code>3.0.1+26.3</code></td><td>Opcional</td></tr>
+<tr><td><a href="https://modrinth.com/mod/distanthorizons">Distant Horizons</a></td><td><code>3.3.4-26.3</code></td><td>Opcional</td></tr>
 <tr><td><a href="https://modrinth.com/mod/emotecraft">Emotecraft</a></td><td><code>3.5.0-b.build.179</code></td><td>Opcional</td></tr>
 <tr><td><a href="https://modrinth.com/mod/entityculling">Entity Culling</a></td><td><code>1.12.1</code></td><td>Obligatorio</td></tr>
 <tr><td><a href="https://modrinth.com/mod/fabric-api">Fabric API</a></td><td><code>0.166.2+26.3</code></td><td>Obligatorio</td></tr>
@@ -173,7 +186,7 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <tr><td><a href="https://modrinth.com/mod/lithium">Lithium</a></td><td><code>mc26.3-0.26.4-fabric</code></td><td>Obligatorio</td></tr>
 <tr><td><a href="https://modrinth.com/mod/modmenu">Mod Menu</a></td><td><code>21.0.1</code></td><td>Opcional</td></tr>
 <tr><td><a href="https://modrinth.com/mod/mouse-tweaks">Mouse Tweaks</a></td><td><code>26.3-2.31-fabric</code></td><td>Opcional</td></tr>
-<tr><td><a href="https://modrinth.com/mod/no-chat-reports">No Chat Reports</a></td><td><code>Fabric-MC26.3-v2.21.2</code></td><td>Obligatorio</td></tr>
+<tr><td><a href="https://modrinth.com/mod/no-chat-reports">No Chat Reports</a></td><td><code>Fabric-MC26.3-v2.21.3</code></td><td>Obligatorio</td></tr>
 <tr><td><a href="https://modrinth.com/mod/not-enough-animations">Not Enough Animations</a></td><td><code>1.12.7</code></td><td>Opcional</td></tr>
 <tr><td><a href="https://modrinth.com/mod/particle-rain">Particle Rain</a></td><td><code>v4.0.4+26.3-fabric</code></td><td>Opcional</td></tr>
 <tr><td><a href="https://modrinth.com/mod/player-animation-library">Player Animation Library</a></td><td><code>1.2.9</code></td><td>Obligatorio</td></tr>
@@ -201,7 +214,7 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <tr><td><a href="https://modrinth.com/resourcepack/patrix-32x">Patrix 32x</a></td><td><code>93</code></td><td>Textura</td></tr>
 <tr><td><a href="https://modrinth.com/resourcepack/visual-armor-trims">Visual: Armor Trims</a></td><td><code>4.3</code></td><td>Textura</td></tr>
 </table>
-<p class="mut">Atajo: el archivo <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.3.1/Olive-SMP-1.3.1.mrpack">Olive-SMP-1.3.1.mrpack</a> contiene exactamente esta lista; la mayoría de launchers lo importan. El servidor comprueba las cuentas de Minecraft: solo entran cuentas oficiales apuntadas con <code>/apuntarme</code>.</p>
+<p class="mut">Atajo: el archivo <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.0/Olive-SMP-1.4.0.mrpack">Olive-SMP-1.4.0.mrpack</a> contiene exactamente esta lista; la mayoría de launchers lo importan. Solo entran nombres apuntados con <code>/apuntarme</code>: las cuentas oficiales entran directas y las de TLauncher con <code>/register</code> y <code>/login</code>.</p>
 
 <h2 id="graficos">Gráficos</h2>
 <p>Texturas: <b>Patrix 32x</b> cambia el aspecto de todos los bloques, y con shaders gana relieve y brillos. Viene activada junto con Fresh Animations, hojas, hierba, cultivos, faroles y adornos de armadura. Si tu PC va justo, desactiva Patrix en <i>Opciones → Paquetes de recursos</i>.</p>
@@ -210,6 +223,8 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <tr><td>Complementary</td><td>El bonito: agua, nubes, sombras y luz. Para gráficas medias o buenas (GTX 1660 / RX 580 o mejor).</td></tr>
 <tr><td>MakeUp Ultra Fast</td><td>Ligero, para portátiles y gráficas modestas.</td></tr>
 </table>
+
+<p><b>Distant Horizons</b> (opcional, viene desmarcado): dibuja el paisaje a kilómetros con poco coste para lo que enseña. El servidor te envía el terreno ya calculado, así que ves lejos aunque no hayas pasado por allí. Necesita 16 GB de RAM y una gráfica decente; si tu PC va justo, déjalo apagado. Actívalo con el botón <i>Optional mods…</i> (o diciendo que sí en el instalador de TLauncher). Se ajusta en <i>Opciones → Distant Horizons</i>.</p>
 
 <h2 id="teclas">Teclas</h2>
 <table>
@@ -228,7 +243,9 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <p>La primera vez, pulsa <kbd>V</kbd> y elige tu micrófono. Te oyen los que están cerca, y se oye más bajo cuanto más lejos. Para hablar, mantén <kbd>Bloq Mayús</kbd>; puedes cambiar a «activación por voz» en el mismo menú. En <kbd>V</kbd> también puedes crear un grupo para hablar con tus amigos aunque estéis lejos.</p>
 
 <h2 id="problemas">Problemas frecuentes</h2>
-<details><summary>«You are not white-listed on this server»</summary><p style="margin-top:8px">Aún no te has apuntado, o lo hiciste con otro nombre. En Discord, canal #minecraft: <code>/apuntarme</code> con tu nombre exacto (da igual mayúsculas o minúsculas).</p></details>
+<details><summary>«You are not white-listed on this server»</summary><p style="margin-top:8px">Aún no te has apuntado, o lo hiciste con otro nombre. En Discord, canal #minecraft: <code>/apuntarme</code> con tu nombre exacto. Con TLauncher, las mayúsculas cuentan: <code>Pepe</code> y <code>pepe</code> son nombres distintos.</p></details>
+<details><summary>TLauncher: «Invalid session» o no me deja entrar con mi nombre</summary><p style="margin-top:8px">Ese nombre es de una cuenta de Minecraft original y el servidor protege a su dueño. Cambia el nombre en TLauncher y vuelve a usar <code>/apuntarme</code> con el nuevo.</p></details>
+<details><summary>TLauncher: me he olvidado de la contraseña</summary><p style="margin-top:8px">Avisa a Josep: te la borra y vuelves a hacer <code>/register</code>.</p></details>
 <details><summary>Al entrar sale un error de mods que faltan o no coinciden</summary><p style="margin-top:8px">Te falta un mod obligatorio o tienes una versión vieja. Abre con <b>JUGAR.bat</b> (no con el Minecraft normal) para que se actualice, o vuelve a importar el .mrpack.</p></details>
 <details><summary>Va a tirones o con pocos FPS</summary><p style="margin-top:8px">Pulsa <kbd>K</kbd> para quitar shaders. Si sigue igual, baja la distancia de renderizado (<i>Opciones → Calidad gráfica</i>) o quita los shaders con el botón <i>Optional mods…</i>.</p></details>
 <details><summary>El juego se cierra al arrancar o pide más memoria</summary><p style="margin-top:8px">En Prism: clic derecho en la instancia <i>Olivé SMP → Editar → Ajustes → Memoria</i> y sube el máximo a 6 GB si tu PC tiene 16 GB.</p></details>

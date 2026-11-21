@@ -36,6 +36,11 @@ hash = "1534471207bfb0818cf0c46d985a080ea64792f457b0c33fcec6e267705b0571"
 metafile = true
 
 [[files]]
+file = "mods/distanthorizons.pw.toml"
+hash = "edfbc02608c2fbb03df6a62e2953697960741e5481125de54ccca2998d29354f"
+metafile = true
+
+[[files]]
 file = "mods/emotecraft.pw.toml"
 hash = "fb406de3e267b6c6bd7b1b92f836caaf4a319123cac0e2813aa228133cf59100"
 metafile = true
@@ -112,7 +117,7 @@ metafile = true
 
 [[files]]
 file = "mods/no-chat-reports.pw.toml"
-hash = "b9dcac7c31cfe260b17999b30085a100f3b5ef5f22bd4abc801f6c89c39fba83"
+hash = "5703b6163c4d57419252536c5b9d59d28baf71d33474dff381f05e8229952fe4"
 metafile = true
 
 [[files]]
