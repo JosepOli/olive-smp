@@ -40,6 +40,16 @@ footer{margin-top:56px;font-size:13px;color:var(--mut)} a{color:var(--acc)}
 .tbl{margin-bottom:6px}
 @media (max-width:560px){.tbl td{display:block;width:auto!important;border-bottom:0;padding:2px 0}.tbl tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}}
 h3{font-size:15px;margin:22px 0 8px;color:var(--fg)}
+.quiz{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:20px}
+.quiz .q{font-weight:700;margin:0 0 10px} .quiz .q small{display:block;font-weight:400;color:var(--mut);font-size:13px}
+.quiz .opts{display:flex;flex-wrap:wrap;gap:8px} .quiz .opts button{padding:9px 14px;text-align:left}
+.quiz .opts button small{display:block;color:var(--mut);font-size:12px}
+.quiz .r ol{margin:10px 0 6px;padding-left:22px} .quiz .r li{margin-bottom:6px}
+.quiz .warn{border-left:4px solid #ef7a5a;background:#2a1a15;padding:10px 12px;border-radius:0 8px 8px 0;margin:10px 0 14px}
+.quiz .warn:before{content:"⚠ ";color:#ef7a5a;font-weight:700}
+.quiz .r .q{font-size:18px} .quiz .nw{white-space:nowrap} .quiz .again{color:#b9c7bf}
+.quiz .again{background:none;border:0;color:var(--mut);text-decoration:underline;padding:0;font-size:14px}
+.quiz [hidden]{display:none!important}
 nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:3px 11px;color:var(--mut)} nav a:hover{color:var(--fg)}
 </style>
 </head>
@@ -47,6 +57,77 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <h1>Olivé <i>SMP</i></h1>
 <p class="mut">Servidor de Minecraft de los amigos de Josep · Java 26.3 con Fabric · abierto 24/7 · versión del pack 1.4.2</p>
 <div class="status"><span class="dot" id="dot"></span><span id="st">Comprobando servidor…</span></div>
+
+<section class="quiz" id="quiz" hidden>
+<div data-step="1">
+<p class="q">¿Cómo juegas a Minecraft?<small>Dos preguntas y te digo qué descargar.</small></p>
+<div class="opts">
+<button data-a="original">Lo tengo comprado<small>cuenta de Microsoft o Game Pass</small></button>
+<button data-a="tl">Con TLauncher<small>sin cuenta comprada</small></button>
+<button data-a="nada">No lo tengo<small>o juego en consola o móvil</small></button>
+</div></div>
+<div data-step="2" hidden>
+<p class="q">¿Qué ordenador tienes?</p>
+<div class="opts">
+<button data-a="win">Windows</button><button data-a="mac">Mac</button><button data-a="linux">Linux</button>
+<button data-a="otro" data-only="original">Ya uso Modrinth App, Prism u otro<small>sé importar un pack</small></button>
+</div></div>
+
+<div class="r" data-r="original-win" hidden>
+<p class="q">Minecraft comprado en Windows</p>
+<p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-Windows-1.4.2.zip">Descargar para Windows</a></p>
+<ol><li>En Discord, canal #minecraft: <code>/apuntarme</code> con tu nombre de Minecraft exacto.</li>
+<li>Descomprime el zip y abre <b>PrismLauncher\prismlauncher.exe</b>. Inicia sesión con tu cuenta de Microsoft (solo la primera vez).</li>
+<li>Doble clic en <b>JUGAR.bat</b>. Descarga todo y entras directo al servidor.</li></ol>
+<a href="#win">Instrucciones completas</a></div>
+
+<div class="r" data-r="original-mac" hidden>
+<p class="q">Minecraft comprado en Mac</p>
+<p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-Mac-1.4.2.zip">Descargar para Mac</a></p>
+<ol><li>En Discord, canal #minecraft: <code>/apuntarme</code> con tu nombre de Minecraft exacto.</li>
+<li>Instala Prism Launcher desde el .dmg e inicia sesión con tu cuenta de Microsoft.</li>
+<li>Arrastra <b>Olive-SMP-instancia.zip</b> a Prism y doble clic en <b>Olivé SMP</b>.</li></ol>
+<a href="#mac">Instrucciones completas</a></div>
+
+<div class="r" data-r="original-linux" hidden>
+<p class="q">Minecraft comprado en Linux</p>
+<p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-instancia-1.4.2.zip">Descargar la instancia</a></p>
+<ol><li>En Discord, canal #minecraft: <code>/apuntarme</code> con tu nombre de Minecraft exacto.</li>
+<li>Instala Prism Launcher (Flatpak o AppImage) e inicia sesión con tu cuenta de Microsoft.</li>
+<li>Arrastra el zip a Prism y doble clic en <b>Olivé SMP</b>.</li></ol>
+<a href="#linux">Instrucciones completas</a></div>
+
+<div class="r" data-r="original-otro" hidden>
+<p class="q">Tu propio launcher</p>
+<p>Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-1.4.2.mrpack">Olive-SMP-1.4.2.mrpack</a> e impórtalo (Modrinth App: <i>+ → Importar</i>; Prism: <i>Añadir instancia → Importar</i>).</p>
+<ol><li>En Discord, canal #minecraft: <code>/apuntarme</code> con tu nombre de Minecraft exacto.</li>
+<li>El servidor ya viene en Multijugador. Si cambia el pack, vuelve a importarlo.</li></ol>
+<a href="#versiones">Versiones exactas</a></div>
+
+<div class="r" data-r="tl-win" hidden>
+<p class="q">TLauncher en Windows</p>
+<p class="warn"><b>No descargues el paquete de Windows (JUGAR.bat).</b> Ese es para cuentas compradas y te pedirá iniciar sesión.</p>
+<p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-TLauncher-1.4.2.zip">Descargar instalador para TLauncher</a></p>
+<ol><li>En Discord, canal #minecraft: <code>/apuntarme</code> con <b>el mismo nombre que pones en TLauncher</b>, mayúsculas incluidas.</li>
+<li>Abre TLauncher una vez y ciérralo. Descomprime el zip, ejecuta <b class="nw">Instalar-Olive-SMP.bat</b> y espera a que diga <b>«Listo»</b>.</li>
+<li>En TLauncher elige la versión <b class="nw">fabric-loader-0.20.1-26.3</b> y entra en Multijugador → Olivé SMP.</li>
+<li>La primera vez, en el chat:<br><code>/register TuContraseña TuContraseña</code><br>Las siguientes veces:<br><code>/login TuContraseña</code></li></ol>
+<a href="#tlauncher">Instrucciones completas</a></div>
+
+<div class="r" data-r="tl-mac tl-linux" hidden>
+<p class="q">TLauncher en Mac o Linux</p>
+<p>El instalador automático solo funciona en Windows. Se puede montar a mano: en TLauncher instala <b>Fabric 0.20.1 para 26.3</b> y pon en la carpeta <i>mods</i> los mods de la <a href="#versiones">lista de versiones exactas</a>. Si no te ves con ello, avisa a Josep.</p>
+<ol><li>En Discord, canal #minecraft: <code>/apuntarme</code> con el mismo nombre que en TLauncher.</li>
+<li>La primera vez, en el chat: <code>/register TuContraseña TuContraseña</code>.</li></ol></div>
+
+<div class="r" data-r="nada" hidden>
+<p class="q">Sin Minecraft para ordenador</p>
+<p>El servidor es de <b>Minecraft Java</b>, para ordenador: no vale consola, móvil ni la versión de la Microsoft Store (Bedrock). Para jugar necesitas un ordenador con 8 GB de RAM y una de estas:</p>
+<ol><li><b>Comprar Minecraft Java</b> en <a href="https://www.minecraft.net/es-es/store/minecraft-java-bedrock-edition-pc">minecraft.net</a> (o PC Game Pass). Luego vuelve aquí.</li>
+<li><b>TLauncher</b> en Windows, desde su web oficial. Luego vuelve aquí y elige «Con TLauncher».</li></ol></div>
+
+<p style="margin:12px 0 0"><button class="again" id="qagain" hidden>Empezar de nuevo</button></p>
+</section>
 <div class="addr"><code>5.225.81.47</code><button onclick="navigator.clipboard.writeText('5.225.81.47');this.textContent='Copiado'">Copiar</button></div>
 <nav><a href="#entrar">Cómo entrar</a><a href="#tlauncher">TLauncher</a><a href="#elegir">Elegir mods</a><a href="#mods">Lista de mods</a><a href="#versiones">Versiones</a><a href="#graficos">Gráficos</a><a href="#teclas">Teclas</a><a href="#voz">Chat de voz</a><a href="#problemas">Problemas</a><a href="#normas">Normas</a></nav>
 
@@ -248,6 +329,8 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <h2 id="problemas">Problemas frecuentes</h2>
 <details><summary>«You are not white-listed on this server»</summary><p style="margin-top:8px">Aún no te has apuntado, o lo hiciste con otro nombre. En Discord, canal #minecraft: <code>/apuntarme</code> con tu nombre exacto. Con TLauncher, las mayúsculas cuentan: <code>Pepe</code> y <code>pepe</code> son nombres distintos.</p></details>
 <details><summary>TLauncher: «Invalid session» o no me deja entrar con mi nombre</summary><p style="margin-top:8px">Ese nombre es de una cuenta de Minecraft original y el servidor protege a su dueño. Cambia el nombre en TLauncher y vuelve a usar <code>/apuntarme</code> con el nuevo.</p></details>
+<details><summary>TLauncher: me pide iniciar sesión o una cuenta de Microsoft</summary><p style="margin-top:8px">Has descargado el paquete de Windows (JUGAR.bat), que es para cuentas compradas. Con TLauncher usa el <a href="#tlauncher">instalador para TLauncher</a> y abre el juego desde TLauncher.</p></details>
+<details><summary>«This server requires Fabric API installed on your client»</summary><p style="margin-top:8px">Entras con Fabric pero sin los mods del pack. Con TLauncher: cierra el juego, ejecuta otra vez <b>Instalar-Olive-SMP.bat</b> hasta que diga «Listo» y elige la versión <b>fabric-loader-0.20.1-26.3</b>. Si sigue igual, mira en TLauncher (engranaje) que la carpeta del juego sea <code>%APPDATA%\.minecraft</code>.</p></details>
 <details><summary>TLauncher: me he olvidado de la contraseña</summary><p style="margin-top:8px">Avisa a Josep: te la borra y vuelves a hacer <code>/register</code>.</p></details>
 <details><summary>Al entrar sale un error de mods que faltan o no coinciden</summary><p style="margin-top:8px">Te falta un mod obligatorio o tienes una versión vieja. Abre con <b>JUGAR.bat</b> (no con el Minecraft normal) para que se actualice, o vuelve a importar el .mrpack.</p></details>
 <details><summary>Va a tirones o con pocos FPS</summary><p style="margin-top:8px">Pulsa <kbd>K</kbd> para quitar shaders. Si sigue igual, baja la distancia de renderizado (<i>Opciones → Calidad gráfica</i>) o quita los shaders con el botón <i>Optional mods…</i>.</p></details>
@@ -263,6 +346,16 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 </footer>
 </main>
 <script>
+(()=>{const q=document.getElementById("quiz");if(!q)return;q.hidden=false;
+ const s1=q.querySelector('[data-step="1"]'),s2=q.querySelector('[data-step="2"]'),ag=document.getElementById("qagain");let a1="";
+ const res=k=>q.querySelectorAll(".r").forEach(r=>r.hidden=!r.dataset.r.split(" ").includes(k));
+ const show=(k)=>{s1.hidden=true;s2.hidden=true;res(k);ag.hidden=false;try{history.replaceState(null,"","#q-"+k)}catch(e){}};
+ s1.querySelectorAll("button").forEach(b=>b.onclick=()=>{a1=b.dataset.a;if(a1==="nada")return show("nada");
+  s2.querySelectorAll("button").forEach(x=>x.hidden=!!x.dataset.only&&x.dataset.only!==a1);s1.hidden=true;s2.hidden=false;ag.hidden=false;});
+ s2.querySelectorAll("button").forEach(b=>b.onclick=()=>show(a1+"-"+b.dataset.a));
+ ag.onclick=()=>{res("");s1.hidden=false;s2.hidden=true;ag.hidden=true;try{history.replaceState(null,"",location.pathname)}catch(e){}};
+ const h=location.hash.startsWith("#q-")&&location.hash.slice(3);if(h&&q.querySelector('.r[data-r~="'+h+'"]'))show(h);
+})();
 fetch("https://api.mcsrvstat.us/3/5.225.81.47").then(r=>r.json()).then(d=>{
  const on=d.online; document.getElementById("dot").className="dot"+(on?" on":"");
  document.getElementById("st").textContent=on?`En línea · ${d.players.online}/${d.players.max} jugando`:"Ahora mismo no responde";
