@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Olivé SMP</title>
 <style>
-:root{--bg:#0f1311;--card:#171d1a;--line:#26302b;--fg:#e8efe9;--mut:#93a39a;--acc:#7bd88f;--acc2:#e6c56b}
+:root{--bg:#0f1311;--card:#171d1a;--line:#26302b;--fg:#e8efe9;--mut:#aab9b0;--acc:#7bd88f;--acc2:#e6c56b}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main{max-width:760px;margin:0 auto;padding:40px 20px 64px}
@@ -24,7 +24,7 @@ button,.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:
 ol.steps{list-style:none;padding:0;margin:0;counter-reset:s}
 ol.steps li{counter-increment:s;position:relative;padding:0 0 18px 46px}
 ol.steps li:before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:8px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--acc)}
-.note{border-left:3px solid var(--acc2);background:#1b1a14;padding:12px 14px;border-radius:0 8px 8px 0;margin:6px 0 0}
+.note{border-left:3px solid #8fb3ff;background:#151b24;padding:12px 14px;border-radius:0 8px 8px 0;margin:6px 0 0}
 ul.mods{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
 ul.mods li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column}
 ul.mods span{font-size:13px;color:var(--mut)} ul.mods em{font-style:normal;font-size:14px;margin-top:4px}
@@ -40,9 +40,36 @@ footer{margin-top:56px;font-size:13px;color:var(--mut)} a{color:var(--acc)}
 .tbl{margin-bottom:6px}
 @media (max-width:560px){.tbl td{display:block;width:auto!important;border-bottom:0;padding:2px 0}.tbl tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}}
 h3{font-size:15px;margin:22px 0 8px;color:var(--fg)}
-.quiz{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:20px}
+.quiz{background:var(--card);border:2px solid var(--acc);border-radius:14px;padding:18px 20px;margin-top:22px;box-shadow:0 0 0 4px #7bd88f1f,0 8px 30px #0006}
+.quiz-k{display:inline-block;margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#0b120d;background:var(--acc);border-radius:99px;padding:2px 10px}
+.quiz .q{font-size:19px}
+.quiz .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))} .quiz .opts button{border-width:2px;font-weight:600;background:#212b26} .quiz .opts button:hover{border-color:var(--acc)}
+/* secciones desplegables (las crea el script; sin JS se ve todo abierto) */
+details.sec{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:0;margin:0}
+.addr{margin-bottom:26px}
+details.sec:last-of-type{border-bottom:1px solid var(--line)}
+details.sec>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:15px 2px}
+details.sec>summary::-webkit-details-marker,details.sub>summary::-webkit-details-marker{display:none}
+details.sec>summary h2{margin:0;font-size:14px;color:var(--fg)}
+details.sec>summary::after,details.sub>summary::after{content:"";width:9px;height:9px;border-right:2px solid #c9d6ce;border-bottom:2px solid #c9d6ce;transform:rotate(45deg);transition:transform .15s;margin:0 6px 4px 12px;flex:none}
+details.sec[open]>summary::after,details.sub[open]>summary::after{transform:rotate(-135deg);margin-bottom:-4px}
+details.sec>.body{padding:0 0 22px}
+details.sec>summary:hover h2{color:var(--acc)}
+details.sub{margin-top:10px;border-width:1px 1px 1px 4px;padding:0 14px} details.sub>summary{list-style:none;display:flex;align-items:center;padding:12px 0;font-size:16px}
+details.sub>summary .tag{margin-right:auto;margin-left:10px} details.sub[open]{padding-bottom:6px}
+details.sub.ok{border-left-color:var(--acc)} details.sub.tl{border-left-color:#ef9a4a}
+.tag.ok{background:#1f3325;color:var(--acc)} .tag.tl{background:#3a2716;color:#ffb26b}
+.warn{border-left:4px solid #ef7a5a;background:#2a1a15;padding:10px 12px;border-radius:0 8px 8px 0;margin:4px 0 14px}
+.warn:before{content:"⚠ ";color:#ef7a5a;font-weight:700}
+.fork-t{margin:16px 0 8px;font-weight:600}
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:10px} .fork-c{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--acc);border-radius:10px;padding:10px 12px}
+.fork-c.tl{border-top-color:#ef9a4a;text-decoration:none;color:var(--fg)} a.fork-c:hover{border-color:#ef9a4a}
+.fork-l{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.fork-l a{font-size:14px;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:2px 10px}.fork-l a:hover{border-color:var(--acc)} .fork-h{font-weight:700;margin:0 0 4px} .fork-c .mut{margin:0;font-size:14px}
+@media (max-width:560px){.fork{grid-template-columns:1fr}.quiz .opts{grid-template-columns:1fr}.quiz{padding:16px 14px}ol.steps li{padding-left:40px}}
+.quiz .opts button{position:relative;}.quiz .opts button:after{content:"›";position:absolute;right:12px;top:50%;transform:translateY(-55%);font-size:22px;color:var(--acc)}
+.warn{font-weight:600} details.sub,details.sec{scroll-margin-top:14px}
 .quiz .q{font-weight:700;margin:0 0 10px} .quiz .q small{display:block;font-weight:400;color:var(--mut);font-size:13px}
-.quiz .opts{display:flex;flex-wrap:wrap;gap:8px} .quiz .opts button{padding:9px 14px;text-align:left}
+.quiz .opts{gap:8px} .quiz .opts button{padding:10px 34px 10px 14px;text-align:left;width:100%}
 .quiz .opts button small{display:block;color:var(--mut);font-size:12px}
 .quiz .r ol{margin:10px 0 6px;padding-left:22px} .quiz .r li{margin-bottom:6px}
 .quiz .warn{border-left:4px solid #ef7a5a;background:#2a1a15;padding:10px 12px;border-radius:0 8px 8px 0;margin:10px 0 14px}
@@ -59,6 +86,7 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <div class="status"><span class="dot" id="dot"></span><span id="st">Comprobando servidor…</span></div>
 
 <section class="quiz" id="quiz" hidden>
+<p class="quiz-k">Empieza aquí</p>
 <div data-step="1">
 <p class="q">¿Cómo juegas a Minecraft?<small>Dos preguntas y te digo qué descargar.</small></p>
 <div class="opts">
@@ -75,7 +103,7 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 
 <div class="r" data-r="original-win" hidden>
 <p class="q">Minecraft comprado en Windows</p>
-<p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-Windows-1.4.2.zip">Descargar para Windows</a></p>
+<p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-Windows-1.4.2.zip">Descargar para Windows · Minecraft comprado</a></p>
 <ol><li>En Discord, canal #minecraft: <code>/apuntarme</code> con tu nombre de Minecraft exacto.</li>
 <li>Descomprime el zip y abre <b>PrismLauncher\prismlauncher.exe</b>. Inicia sesión con tu cuenta de Microsoft (solo la primera vez).</li>
 <li>Doble clic en <b>JUGAR.bat</b>. Descarga todo y entras directo al servidor.</li></ol>
@@ -129,23 +157,41 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <p style="margin:12px 0 0"><button class="again" id="qagain" hidden>Empezar de nuevo</button></p>
 </section>
 <div class="addr"><code>5.225.81.47</code><button onclick="navigator.clipboard.writeText('5.225.81.47');this.textContent='Copiado'">Copiar</button></div>
-<nav><a href="#entrar">Cómo entrar</a><a href="#tlauncher">TLauncher</a><a href="#elegir">Elegir mods</a><a href="#mods">Lista de mods</a><a href="#versiones">Versiones</a><a href="#graficos">Gráficos</a><a href="#teclas">Teclas</a><a href="#voz">Chat de voz</a><a href="#problemas">Problemas</a><a href="#normas">Normas</a></nav>
 
 <h2 id="entrar">Cómo entrar</h2>
 <p class="mut">Vale <b>Minecraft Java comprado</b> (cuenta de Microsoft; también el PC Game Pass) y también <b><a href="#tlauncher">TLauncher</a></b>. No vale la versión Bedrock (consola, móvil o Microsoft Store). Necesitas un ordenador con al menos 8 GB de RAM.</p>
 <p class="mut"><b>Contraseña:</b> con Minecraft comprado no hay ninguna. Solo quien entra sin cuenta de Microsoft (TLauncher) crea una, y se escribe en el chat del juego (tecla <kbd>T</kbd>) al entrar al servidor.</p>
 <p class="note"><b>Antes de jugar, apúntate:</b> en el Discord <b>Cafetería</b>, canal <b>#minecraft</b>, escribe <code>/apuntarme</code> y tu nombre de Minecraft exacto, <b>mayúsculas incluidas</b>. Entras al momento. Una cuenta por persona; si te equivocas, vuelve a usarlo y se cambia. <code>/jugando</code> te dice quién está conectado.</p>
-<nav style="margin:6px 0 4px"><a href="#win">Windows</a><a href="#mac">Mac</a><a href="#linux">Linux</a><a href="#tlauncher">TLauncher</a></nav>
+<p class="fork-t">Elige <b>uno</b> de estos caminos:</p>
+<div class="fork">
+<div class="fork-c"><p class="fork-h">🟩 Tengo Minecraft comprado</p><p class="mut">Cuenta de Microsoft o Game Pass. Sin contraseñas: entras directo.</p>
+<p class="fork-l"><a href="#win">Windows</a><a href="#mac">Mac</a><a href="#linux">Linux</a><a href="#otro">Otro launcher</a></p></div>
+<a class="fork-c tl" href="#tlauncher"><p class="fork-h">🟧 Uso TLauncher →</p><p class="mut">Sin cuenta comprada. Solo Windows. <b>No uses el paquete de Windows</b>: tienes tu propio instalador.</p></a>
+</div>
 
-<h3 id="win">Windows</h3>
+<details name="camino" class="sub ok" id="win"><summary>Windows <span class="tag ok">Minecraft comprado</span></summary>
+<p class="warn">¿Usas <b>TLauncher</b>? <b>Esto no es para ti:</b> este paquete te pedirá cuenta de Microsoft. <a href="#tlauncher">Ve a TLauncher</a>.</p>
 <ol class="steps">
-<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-Windows-1.4.2.zip">Descargar para Windows</a></p>
+<li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-Windows-1.4.2.zip">Descargar para Windows · Minecraft comprado</a></p>
 <p class="mut">43 MB. Descomprímelo donde quieras, por ejemplo en el Escritorio. No se instala nada.</p></li>
 <li><p>Abre <b>PrismLauncher\prismlauncher.exe</b> e inicia sesión: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>. Solo la primera vez.</p></li>
 <li><p>Doble clic en <b>JUGAR.bat</b>. La primera vez sale la ventana para <a href="#elegir">elegir los mods opcionales</a>; luego descarga Java y los mods (unos minutos) y entra directo al servidor.</p></li>
 </ol>
+</details>
 
-<h3 id="mac">Mac</h3>
+<details name="camino" class="sub tl" id="tlauncher"><summary>Windows con TLauncher <span class="tag tl">sin cuenta comprada</span></summary>
+<p class="warn"><b>No descargues «Descargar para Windows · Minecraft comprado»</b>: te pedirá cuenta. Lo tuyo es este instalador.</p>
+<ol class="steps">
+<li><p>Apúntate en Discord con <code>/apuntarme</code> y <b>el mismo nombre que pones en TLauncher</b>, mayúsculas incluidas. Si el nombre ya es de una cuenta de Minecraft original, el servidor no te dejará entrar con él: elige otro.</p></li>
+<li><p>Abre TLauncher una vez y ciérralo (así crea su carpeta). <a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-TLauncher-1.4.2.zip">Descargar instalador para TLauncher</a></p>
+<p class="mut">10 KB. Descomprímelo y haz doble clic en <b>Instalar-Olive-SMP.bat</b>. Descarga los mods de Modrinth y comprueba cada uno (un par de minutos). Si tenías otros mods, los aparta a una carpeta <i>mods-antes-de-OliveSMP</i>; no borra nada. Te pregunta si quieres Distant Horizons. Si Windows avisa de que viene de Internet: <i>Más información → Ejecutar de todas formas</i>.</p></li>
+<li><p>En TLauncher elige la versión <b>fabric-loader-0.20.1-26.3</b> (o <i>Fabric 26.3</i>) y entra. El servidor ya está en <i>Multijugador</i>.</p></li>
+<li><p><b>Contraseña, solo porque entras sin cuenta de Microsoft:</b> ya dentro del servidor, pulsa <kbd>T</kbd> para abrir el chat del juego y escribe la primera vez:<br><code>/register TuContraseña TuContraseña</code><br>Las siguientes veces:<br><code>/login TuContraseña</code><br>Te la inventas tú (no va en TLauncher) y no uses una que tengas en otro sitio.</p></li>
+</ol>
+<p class="mut">Con TLauncher los mods no se actualizan solos: cuando cambie el pack, vuelve a ejecutar el instalador. Descarga TLauncher solo de su web oficial.</p>
+</details>
+
+<details name="camino" class="sub ok" id="mac"><summary>Mac <span class="tag ok">Minecraft comprado</span></summary>
 <ol class="steps">
 <li><p><a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-Mac-1.4.2.zip">Descargar para Mac</a></p>
 <p class="mut">34 MB. Trae el instalador oficial de Prism Launcher, sin modificar, y la instancia Olivé SMP. Sirve para Mac Intel y Apple Silicon.</p></li>
@@ -153,26 +199,18 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 <li><p>En Prism, deja Java en automático e inicia sesión: <i>Cuentas → Gestionar cuentas → Añadir Microsoft</i>.</p></li>
 <li><p>Arrastra <b>Olive-SMP-instancia.zip</b> a la ventana de Prism (o <i>Añadir instancia → Importar</i>) y acepta. Doble clic en <b>Olivé SMP</b> y entra solo.</p></li>
 </ol>
+</details>
 
-<h3 id="linux">Linux</h3>
+<details name="camino" class="sub ok" id="linux"><summary>Linux <span class="tag ok">Minecraft comprado</span></summary>
 <ol class="steps">
 <li><p>Instala Prism Launcher: <code>flatpak install flathub org.prismlauncher.PrismLauncher</code> o el AppImage de <a href="https://prismlauncher.org/download/">prismlauncher.org</a>.</p></li>
 <li><p><a class="btn" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-instancia-1.4.2.zip">Descargar la instancia Olivé SMP</a> (90 KB). Inicia sesión con Microsoft en Prism, arrastra el zip a la ventana (o <i>Añadir instancia → Importar</i>) y doble clic en <b>Olivé SMP</b>.</p></li>
-</ol>
-<p class="mut">En los tres sistemas los mods se actualizan solos cada vez que abres el juego.</p>
+</ol></details>
 
-<h3 id="tlauncher">TLauncher (Windows)</h3>
-<ol class="steps">
-<li><p>Apúntate en Discord con <code>/apuntarme</code> y <b>el mismo nombre que pones en TLauncher</b>, mayúsculas incluidas. Si el nombre ya es de una cuenta de Minecraft original, el servidor no te dejará entrar con él: elige otro.</p></li>
-<li><p>Abre TLauncher una vez y ciérralo (así crea su carpeta). <a class="btn main" href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-TLauncher-1.4.2.zip">Descargar instalador para TLauncher</a></p>
-<p class="mut">10 KB. Descomprímelo y haz doble clic en <b>Instalar-Olive-SMP.bat</b>. Descarga los mods de Modrinth y comprueba cada uno (un par de minutos). Si tenías otros mods, los aparta a una carpeta <i>mods-antes-de-OliveSMP</i>; no borra nada. Te pregunta si quieres Distant Horizons. Si Windows avisa de que viene de Internet: <i>Más información → Ejecutar de todas formas</i>.</p></li>
-<li><p>En TLauncher elige la versión <b>fabric-loader-0.20.1-26.3</b> (o <i>Fabric 26.3</i>) y entra. El servidor ya está en <i>Multijugador</i>.</p></li>
-<li><p><b>Contraseña, solo porque entras sin cuenta de Microsoft:</b> ya dentro del servidor, pulsa <kbd>T</kbd> para abrir el chat del juego y escribe la primera vez <code>/register TuContraseña TuContraseña</code>; las siguientes, <code>/login TuContraseña</code>. Te la inventas tú (no va en TLauncher) y no uses una que tengas en otro sitio.</p></li>
-</ol>
-<p class="mut">Con TLauncher los mods no se actualizan solos: cuando cambie el pack, vuelve a ejecutar el instalador. Descarga TLauncher solo de su web oficial.</p>
-<details><summary>¿Usas la app de Modrinth u otro launcher?</summary>
+<details name="camino" class="sub ok" id="otro"><summary>Modrinth App, Prism u otro launcher <span class="tag ok">Minecraft comprado</span></summary>
 <p style="margin-top:10px">Descarga <a href="https://github.com/JosepOli/olive-smp/releases/download/v1.4.2/Olive-SMP-1.4.2.mrpack">Olive-SMP-1.4.2.mrpack</a> e impórtalo (Modrinth App: <i>+ → Importar</i>; Prism: <i>Añadir instancia → Importar</i>). El servidor ya viene en la lista de multijugador.</p>
 <p class="mut">Así se instalan todos los mods. Para quitar un opcional, desactívalo en la lista de mods de tu launcher. Los mods no se actualizan solos: si cambia el pack, vuelve a importarlo desde aquí.</p></details>
+
 
 <h2 id="elegir">Elegir mods</h2>
 <p>El pack tiene <b>17 mods obligatorios</b>, sin ellos no puedes entrar o el juego va peor, y <b>33 opcionales</b>, que vienen marcados pero puedes quitar.</p>
@@ -347,6 +385,16 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px} nav a{font-size:14px;te
 </footer>
 </main>
 <script>
+// Secciones desplegables: cada <h2> y lo que le sigue van dentro de un <details> cerrado.
+(()=>{const m=document.querySelector("main");[...m.querySelectorAll(":scope>h2")].forEach(h=>{
+  const d=document.createElement("details");d.className="sec";const s=document.createElement("summary");const b=document.createElement("div");b.className="body";
+  h.before(d);let n=h.nextSibling;while(n&&!(n.nodeType===1&&(n.tagName==="H2"||n.tagName==="FOOTER"))){const x=n.nextSibling;b.appendChild(n);n=x}
+  s.appendChild(h);d.append(s,b);});
+ const abrir=id=>{const el=id&&document.getElementById(id);if(!el)return;let p=el;while(p){if(p.tagName==="DETAILS")p.open=true;p=p.parentElement}
+  if(el.tagName==="DETAILS")el.open=true;setTimeout(()=>el.scrollIntoView({block:"start"}),0)};
+ document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(a&&!a.getAttribute("href").startsWith("#q-"))abrir(a.getAttribute("href").slice(1))});
+ window.addEventListener("hashchange",()=>abrir(location.hash.slice(1)));
+ if(location.hash&&!location.hash.startsWith("#q-"))abrir(location.hash.slice(1));})();
 (()=>{const q=document.getElementById("quiz");if(!q)return;q.hidden=false;
  const s1=q.querySelector('[data-step="1"]'),s2=q.querySelector('[data-step="2"]'),ag=document.getElementById("qagain");let a1="";
  const res=k=>q.querySelectorAll(".r").forEach(r=>r.hidden=!r.dataset.r.split(" ").includes(k));
